@@ -16,3 +16,5 @@
 0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:34:32 +0800] "GET /Tomproject/%E6%AC%A2%E8%BF%8E%E7%95%8C%E9%9D%A2.html HTTP/1.1" 200 27821
 0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:34:55 +0800] "GET /Tomproject/assets/font-awesome/fonts/fontawesome-webfontba72.woff?v=4.0.3 HTTP/1.1" 200 44432
 0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:34:56 +0800] "GET /favicon.ico HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:41:55 +0800] "GET /favicon.ico HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:41:59 +0800] "GET /Tomproject/assets/css/bootstrap.css.map HTTP/1.1" 404 1125
