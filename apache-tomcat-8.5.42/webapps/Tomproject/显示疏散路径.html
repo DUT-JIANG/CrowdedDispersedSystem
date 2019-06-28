@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+    body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=rvgrn6yT8jA11suotGclTuLe9Aj3AivK"></script>
     <title>人群疏散系统</title>
     <!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
@@ -318,67 +322,21 @@
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
-			 <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="page-header">
-                            显示疏散路径<small>Show up your stats</small>
-                        </h1>
-                    </div>
-                </div> 
+			  <div class="row">
+            <div class="col-md-11">
+                <h1 class="page-header">
+                    显示疏散路径<small>Show up you the map</small>
+                </h1>
+            </div>
+        </div> 
                  <!-- /. ROW  -->
-             
-                <div class="row"> 
-                    
-                      
-                               <div class="col-md-6 col-sm-12 col-xs-12">                     
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Bar Chart
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-bar-chart"></div>
-                        </div>
-                    </div>            
-                </div>
-                      <div class="col-md-6 col-sm-12 col-xs-12">                     
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Area Chart
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-area-chart"></div>
-                        </div>
-                    </div>            
-                </div> 
-                
-           </div>
+                 <div class="row">
+                 <div class="col-md-12">
+        <iframe src="map.html" width="100%" height="720" frameborder="0" scrolling="no"></iframe>
+                 </div>
+        </div>
                  <!-- /. ROW  -->
-                <div class="row">                     
-                      
-                               <div class="col-md-6 col-sm-12 col-xs-12">                     
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Donut Chart
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-line-chart"></div>
-                        </div>
-                    </div>            
-                </div>
-                      <div class="col-md-6 col-sm-12 col-xs-12">                     
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Line Chart
-                        </div>
-                        <div class="panel-body">                            
-							<div id="morris-donut-chart"></div>
-                        </div>
-                    </div>            
-                </div> 
-                
-           </div>
-                 <!-- /. ROW  -->
-				 <footer><p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
+				<footer><p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
 				</div>
              <!-- /. PAGE INNER  -->
             </div>

@@ -11,3 +11,8 @@
 0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:23:45 +0800] "GET /Tomproject/assets/js/morris/morris.js HTTP/1.1" 200 67203
 0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:23:45 +0800] "GET /Tomproject/assets/js/custom-scripts.js HTTP/1.1" 200 5909
 0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:24:09 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:33:24 +0800] "GET /Tomproject HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:33:24 +0800] "GET /Tomproject/ HTTP/1.1" 200 4092
+0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:34:32 +0800] "GET /Tomproject/%E6%AC%A2%E8%BF%8E%E7%95%8C%E9%9D%A2.html HTTP/1.1" 200 27821
+0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:34:55 +0800] "GET /Tomproject/assets/font-awesome/fonts/fontawesome-webfontba72.woff?v=4.0.3 HTTP/1.1" 200 44432
+0:0:0:0:0:0:0:1 - - [28/Jun/2019:14:34:56 +0800] "GET /favicon.ico HTTP/1.1" 304 -
