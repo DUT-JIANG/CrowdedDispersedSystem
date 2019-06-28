@@ -14,10 +14,28 @@
     <!-- Custom Styles-->
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
     <!-- Google Fonts-->
-    <link href='http://fonts.useso.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <style> 
     .becenter{text-align:center} 
     </style>
+    <style> 
+    th{
+    height:40px;
+    text-align:justify;
+    text-align-last:justify;
+    } 
+    .tr_name{
+     width:100px;
+    }
+    .tr_input{
+      width:300px;
+    }
+    .tr_block{
+    width:10px;
+    }
+    .tr_block2{
+    width:25%;
+    }
+    </style>   
 </head>
 
 <body>
@@ -249,7 +267,7 @@
                         <a class="active-menu" href="#"><i class="fa fa-dashboard"></i> 演练事件<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="填写演练事件.html">填写演练事件</a>
+                                <a class="active-menu" href="填写演练事件.html">填写演练事件</a>
                             </li>
                             <li>
                                 <a href="查看演练事件.html">查看演练事件</a>
@@ -330,36 +348,63 @@
                     </div> 
                 <!-- /. ROW  -->             
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">                     
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                         <div class="row">
+                            <div class="col-md-2 col-sm-12 col-xs-12">
                             </div>
-                            <div class="panel-body becenter">
-                                <font size="5">
-                                事件名称:
-                                <input type="text" name="firstname" value="Mickey">
-                                <br>
-                                事件类型:
-                                <input type="text" name="firstname" value="Mickey">
-                                <br>
-                                疏散点:
-                                <input type="text" name="firstname" value="Mickey">
-                                <br>
-                                避难点:
-                                <input type="text" name="firstname" value="Mickey">
-                                <br>
-                                待疏散人群:
-                                <input type="text" name="firstname" value="Mickey">
-                                <br>
-                                录入人编号:
-                                <input type="text" name="firstname" value="Mickey">
-                                <br>
-                                演练时间:
-                                <input type="text" name="lastname" value="Mouse">
-                                <br><br>
-                                <input type="button" value="填写完成" onclick="javascrtpt:window.location.href='查看演练事件.html'">
-                            </div>
-                        </div>
+                            <div class="col-md-10 col-sm-12 col-xs-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                        </div>
+                                        <div class="panel-body becenter">
+                                            <table border="0" class="becenter">
+                                                <tr>
+                                                  <th class="tr_block2"></th>
+                                                  <th class="tr_name">事件名称</th>
+                                                  <th class="tr_block"></th>
+                                                  <th class="tr_input"><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>事件类型</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>疏散点</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>避难点</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>待疏散人群</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>录入人编号</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>演练时间</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                </table>
+                                            <input type="button" value="填写完成" onclick="javascrtpt:window.location.href='查看演练事件.html'">
+                                        </div>
+                                    </div>
+                                </div>         
                     </div>            
                 </div>
                 </div>
