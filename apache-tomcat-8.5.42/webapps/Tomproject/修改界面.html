@@ -41,32 +41,24 @@
                     <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-heading important">
-                                登录界面
+                                修改密码
                             </div>
                             <div class="panel-body" >
-                                <div class= "row">
-                                    <div class="col-md-2 col-sm-12 col-xs-12">
-                                    </div>
-                                    <div class="col-md-10 col-sm-12 col-xs-12">
-                                    用户名:<br>
-                                    <input type="text" name="firstname" placeholder="Username">
-                                    <br>
-                                    密码:<br>
-                                    <input type="text" name="lastname" placeholder="Password">
-                                    <br><br>
-                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='注册用户.html'">
-                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='忘记验证.html'">
-                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='修改验证.html'">
-                                    <input type="button" value="登录" onclick="MsgBox()">
-                                    <script language="javascript">
-                                    function MsgBox() //登录窗口
+                                  新密码:<br>
+                                  <input type="text" name="firstname" value="Mickey">
+                                  <br>
+                                  确认密码:<br>
+                                  <input type="text" name="lastname" value="Mouse">
+                                  <br><br>
+                                  <input type="button" value="确认" onclick="MsgBox()">
+                            </div>
+                            <script language="javascript">
+                                    function MsgBox() //修改窗口
                                     {
-                                        alert("登录成功"); //弹出对话框 再写一个注册失败
-                                        window.location.href='欢迎界面.html';
+                                        alert("修改成功"); //弹出对话框
+                                        window.location.href='登录界面.html';
                                     }
                                     </script>
-                                    </div>
-                            </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>
@@ -87,6 +79,7 @@
     <script src="assets/js/morris/morris.js"></script>
     <!-- Custom Js -->
     <script src="assets/js/custom-scripts.js"></script>
+
 
 </body>
 

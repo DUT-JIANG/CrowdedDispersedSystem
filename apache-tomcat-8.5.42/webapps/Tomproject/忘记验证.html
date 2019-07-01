@@ -45,13 +45,20 @@
                             </div>
                             <div class="panel-body" >
                                   用户名:<br>
-                                  <input type="text" name="firstname" value="Mickey">
+                                  <input type="text" name="firstname" placeholder="Username">
                                   <br>
-                                  注册邮箱:<br>
-                                  <input type="text" name="lastname" value="Mouse">
+                                  验证信息:<br>
+                                  <input type="text" name="lastname" placeholder="verification">
                                   <br><br>
-                                  <input type="button" value="确认" onclick="javascrtpt:window.location.href='修改密码.html'">
+                                  <input type="button" value="确认" onclick="MsgBox()">
                             </div>
+                            <script language="javascript">
+                                    function MsgBox() //修改窗口
+                                    {
+                                        alert("验证通过"); //弹出对话框 再写一个验证失败窗口
+                                        window.location.href='修改界面.html';
+                                    }
+                                    </script>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>
