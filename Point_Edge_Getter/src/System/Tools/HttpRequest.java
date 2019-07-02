@@ -1,4 +1,4 @@
-package System;
+package System.Tools;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class HttpRequest {
+	
 	/**
 	 * 向指定URL发送GET方法的请求
 	 * 
@@ -34,8 +35,10 @@ public class HttpRequest {
 // 获取所有响应头字段
 			Map<String, List<String>> map = connection.getHeaderFields();
 // 遍历所有的响应头字段
-			for (String key : map.keySet()) {
-				System.out.println(key + "--->" + map.get(key));
+			if(settings.DEBUG_MODE) {
+				for (String key : map.keySet()) {
+					System.out.println(key + "--->" + map.get(key));
+				}
 			}
 // 定义 BufferedReader输入流来读取URL的响应
 			in = new BufferedReader(new InputStreamReader(connection.getInputStream(),"UTF-8"));

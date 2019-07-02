@@ -1,12 +1,13 @@
 package System;
 
+import System.Tools.point;
 import System.Tools.settings;
 
 public class Map {
 	public point src,dst;
 	public point[] tmp;
 	public point[] ans;
-	Map(point src,point dst){
+	public Map(point src,point dst){
 		this.src = src;
 		this.dst = dst;
 		tmp = new point [3];
