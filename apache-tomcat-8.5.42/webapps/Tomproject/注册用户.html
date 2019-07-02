@@ -13,9 +13,29 @@
     <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <!-- Custom Styles-->
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
     <style> 
     .becenter{text-align:center} 
-    </style> 
+    </style>
+    <style> 
+    th{
+    height:40px;
+    text-align:justify;
+    text-align-last:justify;
+    } 
+    .tr_name{
+     width:100px;
+    }
+    .tr_input{
+      width:300px;
+    }
+    .tr_block{
+    width:10px;
+    }
+    .tr_block2{
+    width:25%;
+    }
+    </style>   
 </head>
 
 <body>
@@ -43,20 +63,42 @@
                             <div class="panel-heading important">
                                 注册用户
                             </div>
-                            <div class="panel-body" >
-                                  用户名:
-                                  <input type="text" name="firstname" value="Mickey">
-                                  <br>
-                                  密码:
-                                  <input type="text" name="lastname" value="Mouse">
-                                  <br>
-                                  确认密码:
-                                  <input type="text" name="lastname" value="Mouse">
-                                  <br>
-                                  电子邮箱:
-                                  <input type="text" name="lastname" value="Mouse">
-                                  <br><br>
-                                  <input type="button" value="注册完成" onclick="javascrtpt:window.location.href='登录界面.html'">
+                            <div class="panel-body  becenter" >
+                                  <table border="0" class="becenter">
+                                                <tr>
+                                                  <th class="tr_block2"></th>
+                                                  <th class="tr_name">用户名</th>
+                                                  <th class="tr_block"></th>
+                                                  <th class="tr_input"><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>密码</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>确认密码</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>电子邮箱</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                </tr>
+                                                </table>
+                                                <br>
+                                  <input type="button" value="注册完成" onclick="MsgBox()" >
+                                  <script language="javascript">
+                                    function MsgBox() //注册窗口
+                                    {
+                                        alert("注册成功"); //弹出对话框
+                                        window.location.href='登录界面.html';
+                                    }
+                                  </script>
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
