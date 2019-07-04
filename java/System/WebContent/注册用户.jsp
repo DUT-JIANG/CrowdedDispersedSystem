@@ -64,6 +64,7 @@
                                 注册用户
                             </div>
                             <div class="panel-body  becenter" >
+                            <form action="RegisterServlet" method="post">
                                   <table border="0" class="becenter">
                                                 <tr>
                                                   <th class="tr_block2"></th>
@@ -91,14 +92,7 @@
                                                 </tr>
                                                 </table>
                                                 <br>
-                                  <input type="button" value="注册完成" onclick="MsgBox()" >
-                                  <script language="javascript">
-                                    function MsgBox() //注册窗口
-                                    {
-                                        alert("注册成功"); //弹出对话框
-                                        window.location.href='登录界面.html';
-                                    }
-                                  </script>
+                                  <input type="submit" value="注册完成">
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>

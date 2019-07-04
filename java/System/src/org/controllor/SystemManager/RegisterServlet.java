@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.model.SystemManage.*;
+
 //控制器层，接收view请求，并转发给model
 public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -23,23 +25,23 @@ public class RegisterServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
+        // 处理注册
         request.setCharacterEncoding("utf-8");
-        response.setContentType("text/html;charset=utf-8");
+        response.setContentType("注册界面.jsp;charset=utf-8");
         
-        String userName = request.getParameter("userName");
+        String username = request.getParameter("userName");
         String password = request.getParameter("password");
         
-        boolean flag = new UserDao().checkEmail(email);
+
+        boolean flag = new LoginDao().register(username,password);
         
-        if(flag){
-            request.setAttribute("msg", "此邮箱已被注册！");
-            request.getRequestDispatcher("register.jsp").forward(request, response);
+        if(!flag){
+            request.setAttribute("注册失败，用户名已存在", flag);
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
             return;
         }else{
-            new UserDao().register(userName,email,password);
-            request.setAttribute("msg", "欢迎您"+userName+",注册成功！");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.setAttribute("userName", userName);
+            request.getRequestDispatcher("/welcome.jsp").forward(request, response);
             return;
         }
     }

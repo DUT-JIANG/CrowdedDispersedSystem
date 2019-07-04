@@ -1,5 +1,5 @@
 package org.model;
-import com.mysql.*;
+
 import java.sql.*;
 import java.util.ArrayList;
 public class Query {
@@ -31,12 +31,11 @@ public class Query {
             /*****************************************************/
             /*****************************************************/
                 while (rs.next()){
-                	String[] line = new String [columnCount+1];
+                	String[] line = new String [columnCount];
 	                for(int i=1;i<line.length;i++){
-	                    line[i]=new String(rs.getString(i));
+	                    line[i-1]=new String(rs.getString(i));
 	                 }
 	                ret.add(line);
- 
                 }
                 rs.close();
                 stmt.close();
@@ -84,11 +83,10 @@ public class Query {
             ResultSet rs = stmt.executeQuery(sql);//创建数据对象
             /*****************************************************/
             /*****************************************************/
-            System.out.print("1");
                 while (rs.next()){
-                	String[] line = new String [columnCount+1];
+                	String[] line = new String [columnCount];
 	                for(int i=1;i<line.length;i++){
-	                    line[i]=new String(rs.getString(i));
+	                    line[i-1]=new String(rs.getString(i));
 	                 }
 	                ret.add(line);
  
