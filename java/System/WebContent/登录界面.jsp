@@ -48,23 +48,26 @@
                                     <div class="col-md-2 col-sm-12 col-xs-12">
                                     </div>
                                     <div class="col-md-10 col-sm-12 col-xs-12">
-                                    用户名:<br>
-                                    <input type="text" name="firstname" placeholder="Username">
-                                    <br>
-                                    密码:<br>
-                                    <input type="text" name="lastname" placeholder="Password">
-                                    <br><br>
-                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='注册用户.html'">
-                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='忘记验证.html'">
-                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='修改验证.html'">
-                                    <input type="button" value="登录" onclick="MsgBox()">
-                                    <script language="javascript">
-                                    function MsgBox() //登录窗口
-                                    {
-                                        alert("登录成功"); //弹出对话框 再写一个注册失败
-                                        window.location.href='欢迎界面.html';
-                                    }
-                                    </script>
+                                    <form action="RegisterServlet" method="post">
+										 用户名:<br>
+	                                    <input type="text" name="username" placeholder="Username">
+	                                    <br>
+	                             	       密码:<br>
+	                                    <input type="text" name="password" placeholder="Password">
+	                                    <br><br>
+	                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='注册用户.jsp'">
+	                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='忘记验证.jsp'">
+	                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='修改验证.jsp'">
+	                                    <input type="submit" value="登录" >
+	                                </form>
+	                                    <script language="javascript">
+	                                    function MsgBox() //登录窗口
+	                                    {
+	                                        alert("登录成功"); //弹出对话框 再写一个注册失败
+	                                        window.location.href='欢迎界面.jsp';
+	                                    }
+	                                    </script>
+	                                   
                                     </div>
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
