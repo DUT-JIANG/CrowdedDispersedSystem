@@ -11,7 +11,7 @@ import org.model.SystemManage.*;
 
 //控制器层，接收view请求，并转发给model
 public class RegisterServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+     static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -29,20 +29,29 @@ public class RegisterServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("注册界面.jsp;charset=utf-8");
         
-        String username = request.getParameter("userName");
-        String password = request.getParameter("password");
+        String username   = request.getParameter("username");
+        String password   = request.getParameter("password");
+        String repassword = request.getParameter("repassword");
+        String realname   = request.getParameter("realname");
+        String unit       = request.getParameter("unit");
+        String position   = request.getParameter("position");
+        String id         = request.getParameter("id");
+        String birthdate  = request.getParameter("birthdate");
+        String jointime   = request.getParameter("jointime");
+        String tel        = request.getParameter("tel");
+        String email      = request.getParameter("email");
         
-
-        boolean flag = new LoginDao().register(username,password);
-        
-        if(!flag){
-            request.setAttribute("注册失败，用户名已存在", flag);
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
-            return;
-        }else{
-            request.setAttribute("userName", userName);
-            request.getRequestDispatcher("/welcome.jsp").forward(request, response);
-            return;
+        if(!password.equals(repassword)) {
+        	request.setAttribute("两次密码不一致",password);
+            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+        }
+        else {
+        	User temp = new User(username,id,tel,email);
+        	User user = new User(username,password,realname,unit,position,id,birthdate,jointime,tel,email);
+        	boolean flag = RegisterDao.verify(temp);
+        	if(flag) {
+        		RegisterDao.register(user);
+        	}
         }
     }
 

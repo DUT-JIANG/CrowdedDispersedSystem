@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
+<%@ page language = "java" contentType="text/html;charset=UTF-8" pageEncoding="utf-8" %>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +26,6 @@
             </div>
         </nav>
         <!--/. NAV TOP  -->
-        <div id="login">
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
@@ -60,11 +59,52 @@
 	                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='修改验证.jsp'">
 	                                    <input type="submit" value="登录" >
 	                                </form>
+									<%
+											HttpSession sess = request.getSession();
+											String message = (String)sess.getAttribute("message");
+										
+										if(message == ""){}
+										else{
+											%>
+												 <script type="text/javascript">
+														alert("<%=message %>");
+												 </script>
+											<%
+											sess.setAttribute("message", "");
+										}
+									 %>
+<%-- 	                                <% --%>
+// 								    String mess=(String)session.getAttribute("message");
+// 								    if(mess=="1")
+// 								    {
+// 								    	Response.Write("< script>alert('登录成功！');< /script>");  
+// 								    	Response.Redirect("欢迎界面.jsp"); 
+// 								    }
+// 									else if(mess=="0")
+// 									{
+// 										alert("用户名或密码错误!"); //弹出对话框 再写一个注册失败
+//                                     	window.location.href='登录界面.jsp';
+// 									}
+<%-- 								    %> --%>
+<!-- 								    <script language="javascript"> -->
+// 	                                    function MsgBoxT() //登录窗口
+// 	                                    {
+// 	                                        alert("登录成功!"); //弹出对话框 再写一个注册失败
+// 	                                        window.location.href='欢迎界面.jsp';
+// 	                                    }
+// 	                                    function MsgBoxF() //登录窗口
+// 	                                    {
+// 	                                        alert("用户名或密码有误!"); //弹出对话框 再写一个注册失败
+// 	                                        window.location.href='登录界面.jsp';
+// 	                                    }
+<!-- 	                                </script> -->
                                     </div>
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>
+                </div>
+            </div>    
             <!-- /. PAGE INNER  -->
         </div>
         <!-- /. PAGE WRAPPER  -->

@@ -10,45 +10,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.model.SystemManage.LoginDao;
+import org.model.SystemManage.ModifyDao;
 import org.model.SystemManage.User;
 
-/**
- * Servlet implementation class LoginServlet
- */
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+public class ModifyServlet extends HttpServlet {
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        User user = new User(username,password);
-		boolean flag = LoginDao.login(user);
-		String message =null;
+       
         
-        if(!flag){
-        	message = "用户名或密码有误!";
-        	request.getSession().setAttribute("message", message);
+        User user = new User(username,password);
+		boolean flag = ModifyDao.modify(user);
+        
+        if(flag){
+            request.setAttribute("msg", "用户名或密码错误！");
             request.getRequestDispatcher("登录界面.jsp").forward(request, response);
             return;
         }else{
-        	message = "登录成功!";
-        	request.setAttribute("message", message);
+            request.setAttribute("msg", "登录成功");
             request.getRequestDispatcher("欢迎界面.jsp").forward(request, response);
         return;
         }
 	}
-	
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=utf-8");
