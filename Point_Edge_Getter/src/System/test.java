@@ -1,10 +1,11 @@
 package System;
+import System.Tools.ApiRequest;
+import System.Tools.point;
 
-import System.Tools.*;
-import System.*;
-public class Tester {
-	
+public class test {
+
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		point src=new point(40.01116,116.339303);
 		point dst=new point(39.936404,116.452562);
 		//扩大搜索范围，比如将西北点进行下取整数，对东南点上取整
@@ -19,6 +20,6 @@ public class Tester {
 //        System.out.println();
 //        s = settings.getJSON(s);
 //        System.out.println(s);
-        
 	}
+
 }

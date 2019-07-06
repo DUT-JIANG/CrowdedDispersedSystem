@@ -3,6 +3,9 @@ package System.Tools;
 import System.Tools.result.Route;
 
 public class ApiReturn {
+	public ApiReturn() {
+		
+	}
 	private Route[] routes;
 	private String restriction;
 	private int total;
