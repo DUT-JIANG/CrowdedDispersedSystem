@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
+<%@ page language = "java" contentType="text/html;charset=UTF-8" pageEncoding="utf-8" %>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +26,6 @@
             </div>
         </nav>
         <!--/. NAV TOP  -->
-        <div id="login">
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
@@ -48,28 +47,33 @@
                                     <div class="col-md-2 col-sm-12 col-xs-12">
                                     </div>
                                     <div class="col-md-10 col-sm-12 col-xs-12">
-                                    用户名:<br>
-                                    <input type="text" name="firstname" placeholder="Username">
-                                    <br>
-                                    密码:<br>
-                                    <input type="text" name="lastname" placeholder="Password">
-                                    <br><br>
-                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='注册用户.html'">
-                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='忘记验证.html'">
-                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='修改验证.html'">
-                                    <input type="button" value="登录" onclick="MsgBox()">
-                                    <script language="javascript">
-                                    function MsgBox() //登录窗口
-                                    {
-                                        alert("登录成功"); //弹出对话框 再写一个注册失败
-                                        window.location.href='欢迎界面.html';
-                                    }
-                                    </script>
+                                    <form action="LoginServlet" method="post">
+										 用户名:<br>
+	                                    <input type="text" name="username" placeholder="Username">
+	                                    <br>
+	                             	       密码:<br>
+	                                    <input type="password" name="password" placeholder="Password">
+	                                    <br><br>
+	                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='注册界面.jsp'">
+	                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='忘记验证.jsp'">
+	                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='修改验证.jsp'">
+	                                    <input type="submit" value="登录" >
+	                                </form>
+									<%
+										HttpSession sess = request.getSession();
+										String message = null;
+										message=(String)sess.getAttribute("message");
+								        if(message == "用户名或密码有误!"){
+											out.print(message);
+										}
+									 %>
                                     </div>
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>
+                </div>
+            </div>    
             <!-- /. PAGE INNER  -->
         </div>
         <!-- /. PAGE WRAPPER  -->

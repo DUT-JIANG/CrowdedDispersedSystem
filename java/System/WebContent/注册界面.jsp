@@ -61,48 +61,83 @@
                     <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-heading important">
-                                注册用户
+                                	注册用户
                             </div>
                             <div class="panel-body  becenter" >
-                                  <table border="0" class="becenter">
+                            <form action="RegisterServlet" method="post">
+                                  <table border="1" class="becenter">
                                                 <tr>
                                                   <th class="tr_block2"></th>
-                                                  <th class="tr_name">用户名</th>
+                                                  <th class="tr_name">用户名(警号)</th>
                                                   <th class="tr_block"></th>
-                                                  <th class="tr_input"><input type="text" name="firstname" value="Mickey"></th>
+                                                  <th class="tr_input"><input type="text" name="username" ></th>
                                                 </tr>
                                                 <tr>
                                                   <th></th>
-                                                  <th>密码</th>
+                                                  <th>姓名</th>
                                                   <th></th>
-                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                  <th><input type="text" name="realname" ></th>
                                                 </tr>
                                                 <tr>
                                                   <th></th>
-                                                  <th>确认密码</th>
+                                                  <th>单位</th>
                                                   <th></th>
-                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                  <th><input type="text" name="unit" ></th>
                                                 </tr>
                                                 <tr>
                                                   <th></th>
-                                                  <th>电子邮箱</th>
+                                                  <th>职务</th>
                                                   <th></th>
-                                                  <th><input type="text" name="firstname" value="Mickey"></th>
+                                                  <th><input type="text" name="position" ></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>身份证号</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="id" ></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>出生年月日</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="birthdate" ></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>何时入队</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="jointime" ></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>手机号</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="tel" ></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
+                                                  <th>邮箱</th>
+                                                  <th></th>
+                                                  <th><input type="text" name="email" ></th>
                                                 </tr>
                                                 </table>
                                                 <br>
-                                  <input type="button" value="注册完成" onclick="MsgBox()" >
-                                  <script language="javascript">
-                                    function MsgBox() //注册窗口
-                                    {
-                                        alert("注册成功"); //弹出对话框
-                                        window.location.href='登录界面.html';
-                                    }
-                                  </script>
+                                  <input type="submit" value="注册完成">
+                            </form>
+                            <%
+								HttpSession sess = request.getSession();
+								String message = null;
+								message=(String)sess.getAttribute("message");
+								if(message!=null){
+										out.print(message);
+								}
+							 %>
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>
+                </div>
+            </div>
             <!-- /. PAGE INNER  -->
         </div>
         <!-- /. PAGE WRAPPER  -->
