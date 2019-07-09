@@ -6,6 +6,19 @@ public class User {
 	private String realname;
 	private String unit;
 	private String position;
+	public User(String username, String realname, String unit, String position, String id, String birthdate,
+			String jointime, String tel, String email) {
+		super();
+		this.username = username;
+		this.realname = realname;
+		this.unit = unit;
+		this.position = position;
+		this.id = id;
+		this.birthdate = birthdate;
+		this.jointime = jointime;
+		this.tel = tel;
+		this.email = email;
+	}
 	private String id;
 	private String birthdate;
 	private String jointime;

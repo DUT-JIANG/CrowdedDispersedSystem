@@ -41,24 +41,19 @@
                     <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-heading important">
-                                修改密码
+                                  设置密码
                             </div>
+                            <form action = "SetPasswordServlet" method="post">
                             <div class="panel-body" >
                                   新密码:<br>
-                                  <input type="text" name="firstname" value="Mickey">
+                                  <input type="password" name="password">
                                   <br>
                                   确认密码:<br>
-                                  <input type="text" name="lastname" value="Mouse">
+                                  <input type="password" name="repassword">
                                   <br><br>
-                                  <input type="button" value="确认" onclick="MsgBox()">
+                                  <input type="submit" value="确认" >
                             </div>
-                            <script language="javascript">
-                                    function MsgBox() //修改窗口
-                                    {
-                                        alert("修改成功"); //弹出对话框
-                                        window.location.href='登录界面.html';
-                                    }
-                                    </script>
+                            </form>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>

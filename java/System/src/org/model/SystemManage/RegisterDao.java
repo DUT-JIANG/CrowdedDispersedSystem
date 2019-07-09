@@ -5,31 +5,53 @@ import java.util.ArrayList;
 import org.model.Query;
 
 public class RegisterDao {
-	
-	public static boolean verify(User user)
-	{	
-		ArrayList<String[]> ret = new ArrayList<String[]>();
-		ret = Query.runSql(4,"select police_id,id,tel,email from system.users"
-				+ " where police_id=\'"+user.getUsername()+"\' or id=\'"+user.getId()+"\' or tel=\'"+user.getTel()+"\' or email=\'"+user.getEmail()+"\' ");
-		System.out.println(user.getUsername());
-		System.out.println(user.getPassword());
-		if(ret.get(0)[1]==null)
+	public static boolean verifyU(User user)
+	{
+		ArrayList<String[]> retU = Query.runSql(1,"select police_id from system.users"
+				+ " where police_id=\'"+user.getUsername()+"\'");
+		if(retU.size()==0)
 		{
 			return true;
 		}
 		return false;
 	}
-	public static boolean register(User user)
-	{	
-		ArrayList<String[]> ret = new ArrayList<String[]>();
-		ret = Query.runSql(4,"select police_id,id,tel,email from system.users"
-				+ " where police_id=\'"+user.getUsername()+"\' or id=\'"+user.getId()+"\' or tel=\'"+user.getTel()+"\' or email=\'"+user.getEmail()+"\' ");
-		System.out.println(user.getUsername());
-		System.out.println(user.getPassword());
-		if(ret.get(0)[1]==null)
+	public static boolean verifyI(User user)
+	{
+		ArrayList<String[]> retI = Query.runSql(1,"select id from system.users"
+				+ " where id=\'"+user.getId()+"\'");
+		if(retI.size()==0)
 		{
 			return true;
 		}
 		return false;
+	}
+	public static boolean verifyT(User user)
+	{
+		ArrayList<String[]> retT = Query.runSql(1,"select tel from system.users"
+				+ " where tel=\'"+user.getTel()+"\'");
+		if(retT.size()==0)
+		{
+			return true;
+		}
+		return false;
+	}
+	public static boolean verifyE(User user)
+	{
+		ArrayList<String[]> retE = Query.runSql(1,"select email from system.users"
+				+ " where email=\'"+user.getEmail()+"\'");
+		if(retE.size()==0)
+		{
+			return true;
+		}
+		return false;
+	}
+	public static void register(User user)
+	{
+		String sql = "insert into system.users(police_id,u_name,unit,position,id,birthdate,jointime,tel,email) "
+				+ "values(\'"+user.getUsername()+"\',\'"+user.getRealname()+"\',\'"+user.getUnit()+"\',\'"
+				+user.getPosition()+"\',\'"+user.getId()+"\',\'"+user.getBirthdate()+"\',\'"+user.getJointime()
+				+"\',\'"+user.getTel()+"\',\'"+user.getEmail()+"\')";
+		System.out.println(sql);
+		Query.addSql(sql);
 	}
 }

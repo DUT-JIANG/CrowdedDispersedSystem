@@ -17,10 +17,11 @@ public class LoginDao {
 	public static boolean login(User user)
 	{	
 		ArrayList<String[]> ret = new ArrayList<String[]>();
+		if(user.getUsername()!=null)
 		ret = Query.runSql(2,"select police_id,u_Password from system.users where police_id=\'"+user.getUsername()+"\' ");
-		System.out.println(ret.get(0)[1]);
-		System.out.println(user.getUsername());
-		System.out.println(user.getPassword());
+		if(ret==null)
+			return false;
+		else
 		return user.getPassword().equals(ret.get(0)[1]);
 	}
 	public static boolean register(String username,String password) {

@@ -74,18 +74,6 @@
                                                 </tr>
                                                 <tr>
                                                   <th></th>
-                                                  <th>密码</th>
-                                                  <th></th>
-                                                  <th><input type="text" name="password" ></th>
-                                                </tr>
-                                                <tr>
-                                                  <th></th>
-                                                  <th>确认密码</th>
-                                                  <th></th>
-                                                  <th><input type="text" name="repassword" ></th>
-                                                </tr>
-                                                <tr>
-                                                  <th></th>
                                                   <th>姓名</th>
                                                   <th></th>
                                                   <th><input type="text" name="realname" ></th>
@@ -112,7 +100,7 @@
                                                   <th></th>
                                                   <th>出生年月日</th>
                                                   <th></th>
-                                                  <th><input type="text" name="birthday" ></th>
+                                                  <th><input type="text" name="birthdate" ></th>
                                                 </tr>
                                                 <tr>
                                                   <th></th>
@@ -135,7 +123,15 @@
                                                 </table>
                                                 <br>
                                   <input type="submit" value="注册完成">
-                            </form>>
+                            </form>
+                            <%
+								HttpSession sess = request.getSession();
+								String message = null;
+								message=(String)sess.getAttribute("message");
+								if(message!=null){
+										out.print(message);
+								}
+							 %>
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>

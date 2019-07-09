@@ -29,20 +29,36 @@ public class LoginServlet extends HttpServlet {
         
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        User user = new User(username,password);
-		boolean flag = LoginDao.login(user);
+        System.out.println(username);
+        System.out.println(password);
+		boolean flag;
 		String message =null;
-        
-        if(!flag){
+        if(!username.equals("") && !password.equals(""))
+        {
+            User user = new User(username,password);
+        	flag = LoginDao.login(user);
+        	System.out.println(flag);
+	        if(!flag){
+	        	message = "用户名或密码有误!";
+	        	request.getSession().setAttribute("message", message);
+	            request.getRequestDispatcher("登录界面.jsp").forward(request, response);
+	            System.out.println(message);
+	            return;
+	        }else{
+	        	message = "登录成功!";
+	        	request.getSession().setAttribute("message", message);
+	            request.getRequestDispatcher("欢迎界面.jsp").forward(request, response);
+	            System.out.println(message);
+	        return;
+	        }
+        }
+        else {
         	message = "用户名或密码有误!";
         	request.getSession().setAttribute("message", message);
-            request.getRequestDispatcher("登录界面.jsp").forward(request, response);
+        	request.getRequestDispatcher("登录界面.jsp").forward(request, response);
+            System.out.println(message);
             return;
-        }else{
-        	message = "登录成功!";
-        	request.setAttribute("message", message);
-            request.getRequestDispatcher("欢迎界面.jsp").forward(request, response);
-        return;
+            
         }
 	}
 	

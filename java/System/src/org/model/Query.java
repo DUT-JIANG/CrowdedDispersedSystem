@@ -98,10 +98,7 @@ public class Query {
 		return null;
 	}
 
-public static ArrayList<String[]> addSql(int sql1,String sql)  {
-	// TODO Auto-generated method stub
-	int columnCount = sql1;
-	// TODO Auto-generated method stub
+public static void addSql(String sql)  {
 	try{
 		ArrayList<String[]> ret = new ArrayList<String[]>();
 		Connection conn = null;
@@ -110,23 +107,12 @@ public static ArrayList<String[]> addSql(int sql1,String sql)  {
         //调用Class.forName()方法加载驱动程序 
         Statement stmt = conn.createStatement(); //创建Statement对象
         System.out.println("成功连接到数据库！");
-        ResultSet rs = stmt.executeQuery(sql);//创建数据对象
-            while (rs.next()){
-            	String[] line = new String [columnCount+1];
-                for(int i=1;i<line.length;i++){
-                    line[i-1]=new String(rs.getString(i));
-                 }
-                ret.add(line);
-            }
-            rs.close();
-            stmt.close();
-            conn.close();
-            return ret;
+        stmt.execute(sql);
         }catch(Exception e)
         {
             e.printStackTrace();
         }
-	return null;
+	return;
 }
 
 }

@@ -52,52 +52,21 @@
 	                                    <input type="text" name="username" placeholder="Username">
 	                                    <br>
 	                             	       密码:<br>
-	                                    <input type="text" name="password" placeholder="Password">
+	                                    <input type="password" name="password" placeholder="Password">
 	                                    <br><br>
-	                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='注册用户.jsp'">
+	                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='注册界面.jsp'">
 	                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='忘记验证.jsp'">
 	                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='修改验证.jsp'">
 	                                    <input type="submit" value="登录" >
 	                                </form>
 									<%
-											HttpSession sess = request.getSession();
-											String message = (String)sess.getAttribute("message");
-										
-										if(message == ""){}
-										else{
-											%>
-												 <script type="text/javascript">
-														alert("<%=message %>");
-												 </script>
-											<%
-											sess.setAttribute("message", "");
+										HttpSession sess = request.getSession();
+										String message = null;
+										message=(String)sess.getAttribute("message");
+								        if(message == "用户名或密码有误!"){
+											out.print(message);
 										}
 									 %>
-<%-- 	                                <% --%>
-// 								    String mess=(String)session.getAttribute("message");
-// 								    if(mess=="1")
-// 								    {
-// 								    	Response.Write("< script>alert('登录成功！');< /script>");  
-// 								    	Response.Redirect("欢迎界面.jsp"); 
-// 								    }
-// 									else if(mess=="0")
-// 									{
-// 										alert("用户名或密码错误!"); //弹出对话框 再写一个注册失败
-//                                     	window.location.href='登录界面.jsp';
-// 									}
-<%-- 								    %> --%>
-<!-- 								    <script language="javascript"> -->
-// 	                                    function MsgBoxT() //登录窗口
-// 	                                    {
-// 	                                        alert("登录成功!"); //弹出对话框 再写一个注册失败
-// 	                                        window.location.href='欢迎界面.jsp';
-// 	                                    }
-// 	                                    function MsgBoxF() //登录窗口
-// 	                                    {
-// 	                                        alert("用户名或密码有误!"); //弹出对话框 再写一个注册失败
-// 	                                        window.location.href='登录界面.jsp';
-// 	                                    }
-<!-- 	                                </script> -->
                                     </div>
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
