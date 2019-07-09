@@ -1,7 +1,7 @@
-package System.Tools.result;
+package org.model.SchemeSubmit.Tools.result;
 
-import System.Tools.point;
-import System.Tools.settings;
+import org.model.SchemeSubmit.Tools.point;
+import org.model.SchemeSubmit.Tools.settings;
 
 public class step {
 	private int leg_index;

@@ -1,6 +1,6 @@
-package System.Tools;
+package org.model.SchemeSubmit.Tools;
 
-import System.*;
+import org.model.*;
 public class ApiRequest {
 	private point src;
 	private point dst;

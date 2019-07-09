@@ -1,5 +1,5 @@
-package System.Tools.result;
-import System.Tools.*;
+package org.model.SchemeSubmit.Tools.result;
+import org.model.SchemeSubmit.Tools.*;
 public class Condition {
 	private int status;
 	private int geo_cnt;
@@ -13,5 +13,4 @@ public class Condition {
 		geo_cnt = Integer.parseInt(settings.findAttribute(json, "geo_cnt"));
 		distance = Float.parseFloat(settings.findAttribute(json, "distance"));
 	}
-
 }

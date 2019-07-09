@@ -1,8 +1,14 @@
-package System.Tools;
+package org.model.SchemeSubmit.Tools;
 
 import java.text.DecimalFormat;
 
-public class point {
+
+public class point implements Comparable{
+	@Override 
+    public boolean equals(Object st) 
+    { 
+		return this.x==((point)st).x&&this.y==((point)st).y;
+    }
 	public double x, y;
 
 	public point(double x, double y) {
@@ -63,4 +69,10 @@ public class point {
 		point p = new point(this.x,this.y);
 		return p;
 	}
+
+	@Override
+	public int compareTo(Object o) {
+		return (int) ((this.x-((point)o).x)*(this.y-((point)o).y));
+	}
 }
+

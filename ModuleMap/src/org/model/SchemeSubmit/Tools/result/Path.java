@@ -1,5 +1,5 @@
-package System.Tools.result;
-import System.Tools.*;
+package org.model.SchemeSubmit.Tools.result;
+import org.model.SchemeSubmit.Tools.*;
 public class Path {
 	private point[] p;
 	public Path(String json) {

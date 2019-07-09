@@ -17,12 +17,12 @@
 <script type="text/javascript">
 
 </script>
-<%@page import="System.Tools.ApiRequest"%>
-<%@page import="System.Map"%>
-<%@page import="System.Tools.settings"%>
-<%@page import="System.Tools.ApiReturn"%>
-<%@page import="System.Tools.point"%>
-<%@page import="System.Tools.result.Route"%>
+<%@page import="org.model.SchemeSubmit.Tools.ApiRequest"%>
+<%@page import="org.model.Map"%>
+<%@page import="org.model.SchemeSubmit.Tools.settings"%>
+<%@page import="org.model.SchemeSubmit.Tools.ApiReturn"%>
+<%@page import="org.model.SchemeSubmit.Tools.point"%>
+<%@page import="org.model.SchemeSubmit.Tools.result.Route"%>
 <%@page import="java.util.ArrayList"%>
 
 <script type="text/javascript">
