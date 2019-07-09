@@ -35,6 +35,7 @@ public class RegisterServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         
         String username   = request.getParameter("username");
+        String password   = request.getParameter("password");
         String realname   = request.getParameter("realname");
         String unit       = request.getParameter("unit");
         String position   = request.getParameter("position");
@@ -45,56 +46,67 @@ public class RegisterServlet extends HttpServlet {
         String email      = request.getParameter("email");
         	String message=null;
         	User temp = new User(username,id,tel,email);
-        	User user = new User(username,realname,unit,position,id,birthdate,jointime,tel,email);
+        	User user = new User(username,password,realname,unit,position,id,birthdate,jointime,tel,email);
         	boolean flagU = RegisterDao.verifyU(temp);
         	boolean flagI = RegisterDao.verifyI(temp);
         	boolean flagT = RegisterDao.verifyT(temp);
         	boolean flagE = RegisterDao.verifyE(temp);
-        	if(flagU) {
-        		if(flagI)
-        		{
-        			if(flagT)
-        			{
-        				if(flagE)
-        				{
-        					RegisterDao.register(user);
-        		            request.getRequestDispatcher("设置密码界面.jsp").forward(request, response);
-        				}
-        				else
-        				{
-        					message = "邮箱已被注册";
-        		        	request.getSession().setAttribute("message", message);
-        		            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
-        		            System.out.println(message);
-        		            return;
-        				}
-        			}
-        			else
-    				{
-    					message = "电话号码已被注册";
-    		        	request.getSession().setAttribute("message", message);
-    		            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
-    		            System.out.println(message);
-    		            return;
-    				}
-        		}
-        		else
+        	if(username!="")
+	        	if(flagU) {
+	        		if(flagI)
+	        		{
+	        			if(flagT)
+	        			{
+	        				if(flagE)
+	        				{
+	        					RegisterDao.register(user);
+	        					message="注册成功!";
+	        					request.getSession().setAttribute("message", message);
+	        		            request.getRequestDispatcher("登录界面.jsp").forward(request, response);
+	        				}
+	        				else
+	        				{
+	        					message = "邮箱已被注册";
+	        		        	request.getSession().setAttribute("message", message);
+	        		            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+	        		            System.out.println(message);
+	        		            return;
+	        				}
+	        			}
+	        			else
+	    				{
+	    					message = "电话号码已被注册";
+	    		        	request.getSession().setAttribute("message", message);
+	    		            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+	    		            System.out.println(message);
+	    		            return;
+	    				}
+	        		}
+	        		else
+					{
+						message = "身份证号已被注册";
+			        	request.getSession().setAttribute("message", message);
+			            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+			            System.out.println(message);
+			            return;
+					}
+	        	}
+	        	else
 				{
-					message = "身份证号已被注册";
+					message = "用户名（警号）已被注册";
 		        	request.getSession().setAttribute("message", message);
 		            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
 		            System.out.println(message);
 		            return;
 				}
-        	}
         	else
-			{
-				message = "用户名（警号）已被注册";
-	        	request.getSession().setAttribute("message", message);
-	            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
-	            System.out.println(message);
-	            return;
-			}
+        	{
+        		message = "请输入用户名（警号）!";
+        		request.getSession().setAttribute("message", message);
+        		request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+        		System.out.println(message);
+        		return;
+		}
     }
 
     /**

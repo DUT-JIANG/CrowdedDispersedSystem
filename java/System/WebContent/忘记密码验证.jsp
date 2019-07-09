@@ -41,19 +41,36 @@
                     <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-heading important">
-                                  设置密码
+                                忘记密码验证
                             </div>
-                            <form action = "SetPasswordServlet" method="post">
+                            <form action="ForgetServlet" method="post">
                             <div class="panel-body" >
-                                  新密码:<br>
-                                  <input type="password" name="password">
+                                  用户名:<br>
+                                  <input type="text" name="username" placeholder="Username">
                                   <br>
-                                  确认密码:<br>
-                                  <input type="password" name="repassword">
+                                  身份证号:<br>
+                                  <input type="text" name="id" placeholder="ID—number">
+                                  <br>
+                                  手机号:<br>
+                                  <input type="text" name="tel" placeholder="Tel—number">
+                                  <br>
+                                  邮箱:<br>
+                                  <input type="text" name="email" placeholder="E-mail">
+                                  <br>
                                   <br><br>
-                                  <input type="submit" value="确认" >
+                                  <input type="submit" value="确认">
                             </div>
                             </form>
+                            <%
+								HttpSession sess = request.getSession();
+								String message = "";
+								message=(String)sess.getAttribute("message");
+								if(message!=""){
+										out.print(message);
+								}
+								session.invalidate(); 
+							 %>
+                            
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>

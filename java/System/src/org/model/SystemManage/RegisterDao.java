@@ -47,8 +47,8 @@ public class RegisterDao {
 	}
 	public static void register(User user)
 	{
-		String sql = "insert into system.users(police_id,u_name,unit,position,id,birthdate,jointime,tel,email) "
-				+ "values(\'"+user.getUsername()+"\',\'"+user.getRealname()+"\',\'"+user.getUnit()+"\',\'"
+		String sql = "insert into system.users(police_id,u_Password,u_name,unit,position,id,birthdate,jointime,tel,email) "
+				+ "values(\'"+user.getUsername()+"\',\'"+user.getPassword()+"\',\'"+user.getRealname()+"\',\'"+user.getUnit()+"\',\'"
 				+user.getPosition()+"\',\'"+user.getId()+"\',\'"+user.getBirthdate()+"\',\'"+user.getJointime()
 				+"\',\'"+user.getTel()+"\',\'"+user.getEmail()+"\')";
 		System.out.println(sql);

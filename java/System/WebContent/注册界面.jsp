@@ -74,6 +74,12 @@
                                                 </tr>
                                                 <tr>
                                                   <th></th>
+                                                  <th>密码</th>
+                                                  <th></th>
+                                                  <th><input type="password" name="password" ></th>
+                                                </tr>
+                                                <tr>
+                                                  <th></th>
                                                   <th>姓名</th>
                                                   <th></th>
                                                   <th><input type="text" name="realname" ></th>
@@ -126,11 +132,12 @@
                             </form>
                             <%
 								HttpSession sess = request.getSession();
-								String message = null;
-								message=(String)sess.getAttribute("message");
-								if(message!=null){
-										out.print(message);
+								String verify = null;
+								verify=(String)sess.getAttribute("verify");
+								if(verify!=null){
+									out.print(verify);
 								}
+								session.invalidate(); 
 							 %>
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>

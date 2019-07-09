@@ -3,5 +3,6 @@
   <display-name>System</display-name>
   <welcome-file-list>
     <welcome-file>登录界面.jsp</welcome-file>
+    <welcome-file>设置密码界面.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

@@ -19,6 +19,13 @@ public class User {
 		this.tel = tel;
 		this.email = email;
 	}
+	public User(String username, String id, String tel, String email) {
+		super();
+		this.username = username;
+		this.id = id;
+		this.tel = tel;
+		this.email = email;
+	}
 	private String id;
 	private String birthdate;
 	private String jointime;
@@ -87,13 +94,6 @@ public class User {
 	public User(String username, String password) {
 		this.username = username;
 		this.password = password;
-	}
-	public User(String username, String id, String tel, String email) {
-		super();
-		this.username = username;
-		this.id = id;
-		this.tel = tel;
-		this.email = email;
 	}
 	public User(String username, String password, String realname, String unit, String position, String id,
 			String birthdate, String jointime, String tel, String email) {

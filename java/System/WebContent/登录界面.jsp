@@ -66,6 +66,7 @@
 								        if(message == "用户名或密码有误!"){
 											out.print(message);
 										}
+								        session.invalidate(); 
 									 %>
                                     </div>
                             </div>

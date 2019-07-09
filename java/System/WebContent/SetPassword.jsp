@@ -19,6 +19,9 @@
 </head>
 
 <body>
+	<%!
+		String username;
+	%>
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar">
@@ -41,27 +44,42 @@
                     <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-heading important">
-                                忘记密码
+                                  设置密码
                             </div>
+                            <form action = "SetPasswordServlet" method="post">
                             <div class="panel-body" >
-                                  用户名:<br>
-                                  <input type="text" name="firstname" placeholder="Username">
+                                  新密码:<br>
+                                  <input type="password" name="password">
                                   <br>
-                                  验证信息:<br>
-                                  <input type="text" name="lastname" placeholder="verification">
+                                  确认密码:<br>
+                                  <input type="password" name="repassword">
                                   <br><br>
-                                  <input type="button" value="确认" onclick="MsgBox()">
+                                  <input hidden="hidden" name="username" value="<%=(username==null?' ':username)%>">
+                                  <input type="submit" value="确认" >
                             </div>
-                            <script language="javascript">
-                                    function MsgBox() //修改窗口
-                                    {
-                                        alert("验证通过"); //弹出对话框 再写一个验证失败窗口
-                                        window.location.href='修改界面.html';
-                                    }
-                                    </script>
+                            </form>
+                            <%
+                            	Cookie[] cookies= request.getCookies();
+                            	for(Cookie cookie: cookies){
+                            		if(cookie.getName().equals("username"))
+                            		{
+                            			username=cookie.getValue();
+                            		}
+                            	}
+                            %>
+                 			<%
+								HttpSession sess = request.getSession();
+								String message = null;
+								message=(String)sess.getAttribute("message");
+								if(message!=null){
+										out.print(message);
+								}
+								session.invalidate(); 
+							%>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>
+                </div>>
             <!-- /. PAGE INNER  -->
         </div>
         <!-- /. PAGE WRAPPER  -->

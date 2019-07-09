@@ -30,7 +30,7 @@ public class Query {
                 while (rs.next()){
                 	String[] line = new String [columnCount+1];
 	                for(int i=1;i<line.length;i++){
-	                    line[i-1]=new String(rs.getString(i));
+	                    line[i]=new String(rs.getString(i));
 	                 }
 	                ret.add(line);
                 }
