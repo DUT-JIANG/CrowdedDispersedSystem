@@ -52,7 +52,7 @@ public class ForgetServlet extends HttpServlet {
         }
         else {
         	request.getSession().setAttribute("verify", verify);
-        	request.getRequestDispatcher("忘记密码验证.jsp").forward(request, response);
+        	request.getRequestDispatcher("Forget.jsp").forward(request, response);
         }
 	}
 

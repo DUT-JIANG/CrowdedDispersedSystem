@@ -10,7 +10,7 @@ public class ForgetDao {
 		String message=null;
 		ArrayList<String[]> ret = Query.runSql(4,"select police_id,id,tel,email from system.users"
 				+ " where police_id=\'"+user.getUsername()+"\'");
-		if(ret==null)
+		if(ret.size()==0)
 		{	
 			message="用户名不存在!";
 			System.out.println(message);

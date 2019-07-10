@@ -19,6 +19,17 @@
 </head>
 
 <body>
+	<%!
+		String set="";
+	%>
+	<%
+		Cookie[] cookies = request.getCookies();
+		for (Cookie cookie : cookies) {
+			if (cookie.getName().equals("message")) {
+				set = cookie.getValue();
+			}
+		}
+	%>
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar">
@@ -54,19 +65,23 @@
 	                             	       密码:<br>
 	                                    <input type="password" name="password" placeholder="Password">
 	                                    <br><br>
-	                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='注册界面.jsp'">
-	                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='忘记验证.jsp'">
-	                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='修改验证.jsp'">
+	                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='Register.jsp'">
+	                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='Forget.jsp'">
+	                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='Modify.jsp'">
 	                                    <input type="submit" value="登录" >
 	                                </form>
+	                                <%=set%>
+	                                <%
+		                                set=" ";
+	                                %>
 									<%
 										HttpSession sess = request.getSession();
-										String message = null;
+										String message ="";
 										message=(String)sess.getAttribute("message");
 								        if(message == "用户名或密码有误!"){
 											out.print(message);
 										}
-								        session.invalidate(); 
+								        session.invalidate();
 									 %>
                                     </div>
                             </div>

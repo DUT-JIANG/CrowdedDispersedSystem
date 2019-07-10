@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,20 +34,22 @@ public class SetPasswordServlet extends HttpServlet {
 	        {	
 	        	message="两次密码不一致";
 	        	request.getSession().setAttribute("message", message);
-	            request.getRequestDispatcher("设置密码.jsp").forward(request, response);
+	            request.getRequestDispatcher("SetPassword.jsp").forward(request, response);
 	        }
 	        else
 	        {	
 	        	SetPasswordDao.setpassword(password,username);
 	        	message="密码设置成功!";
-	        	request.getSession().setAttribute("message", message);
-	            request.getRequestDispatcher("登录界面.jsp").forward(request, response);
+	        	Cookie cookie = new Cookie("message",message);//创建一个键值对的cookie对象
+	        	cookie.setMaxAge(1);//设置cookie的生命周期
+	        	response.addCookie(cookie);//添加到response中
+	        	response.sendRedirect("Login.jsp");
 	        }
         }
         else{
         	message="请输入密码!";
         	request.getSession().setAttribute("message", message);
-            request.getRequestDispatcher("设置密码.jsp").forward(request, response);
+            request.getRequestDispatcher("SetPassword.jsp").forward(request, response);
         }
 	}
 

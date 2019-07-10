@@ -22,7 +22,15 @@
 	<%!
 		String username;
 	%>
-    <div id="wrapper">
+	<%
+		Cookie[] cookies = request.getCookies();
+		for (Cookie cookie : cookies) {
+			if (cookie.getName().equals("username")) {
+				username = cookie.getValue();
+			}
+		}
+	%>
+	<div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar">
                 <p class="navbar-brand">人群疏散系统</p>
@@ -58,15 +66,7 @@
                                   <input type="submit" value="确认" >
                             </div>
                             </form>
-                            <%
-                            	Cookie[] cookies= request.getCookies();
-                            	for(Cookie cookie: cookies){
-                            		if(cookie.getName().equals("username"))
-                            		{
-                            			username=cookie.getValue();
-                            		}
-                            	}
-                            %>
+                            
                  			<%
 								HttpSession sess = request.getSession();
 								String message = null;

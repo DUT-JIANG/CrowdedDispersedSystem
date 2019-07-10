@@ -62,13 +62,13 @@ public class RegisterServlet extends HttpServlet {
 	        					RegisterDao.register(user);
 	        					message="注册成功!";
 	        					request.getSession().setAttribute("message", message);
-	        		            request.getRequestDispatcher("登录界面.jsp").forward(request, response);
+	        		            request.getRequestDispatcher("Login.jsp").forward(request, response);
 	        				}
 	        				else
 	        				{
 	        					message = "邮箱已被注册";
 	        		        	request.getSession().setAttribute("message", message);
-	        		            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+	        		            request.getRequestDispatcher("Register.jsp").forward(request, response);
 	        		            System.out.println(message);
 	        		            return;
 	        				}
@@ -77,7 +77,7 @@ public class RegisterServlet extends HttpServlet {
 	    				{
 	    					message = "电话号码已被注册";
 	    		        	request.getSession().setAttribute("message", message);
-	    		            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+	    		            request.getRequestDispatcher("Register.jsp").forward(request, response);
 	    		            System.out.println(message);
 	    		            return;
 	    				}
@@ -86,7 +86,7 @@ public class RegisterServlet extends HttpServlet {
 					{
 						message = "身份证号已被注册";
 			        	request.getSession().setAttribute("message", message);
-			            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+			            request.getRequestDispatcher("Register.jsp").forward(request, response);
 			            System.out.println(message);
 			            return;
 					}
@@ -95,7 +95,7 @@ public class RegisterServlet extends HttpServlet {
 				{
 					message = "用户名（警号）已被注册";
 		        	request.getSession().setAttribute("message", message);
-		            request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+		            request.getRequestDispatcher("Register.jsp").forward(request, response);
 		            System.out.println(message);
 		            return;
 				}
@@ -103,7 +103,7 @@ public class RegisterServlet extends HttpServlet {
         	{
         		message = "请输入用户名（警号）!";
         		request.getSession().setAttribute("message", message);
-        		request.getRequestDispatcher("注册界面.jsp").forward(request, response);
+        		request.getRequestDispatcher("Register.jsp").forward(request, response);
         		System.out.println(message);
         		return;
 		}

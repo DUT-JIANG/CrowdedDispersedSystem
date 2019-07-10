@@ -70,7 +70,8 @@
                                                   <th class="tr_block2"></th>
                                                   <th class="tr_name">用户名(警号)</th>
                                                   <th class="tr_block"></th>
-                                                  <th class="tr_input"><input type="text" name="username" ></th>
+                                                  <th class="tr_input">
+                                                  <input type="text" name="username" id="use" pattern="/d{6}/"></th>
                                                 </tr>
                                                 <tr>
                                                   <th></th>
@@ -98,48 +99,62 @@
                                                 </tr>
                                                 <tr>
                                                   <th></th>
-                                                  <th>身份证号</th>
+                                                  <th>身份证号(18位)</th>
                                                   <th></th>
-                                                  <th><input type="text" name="id" ></th>
+                                                  <th><input type="text" name="id" id="id" pattern="/d{18}/"></th>
                                                 </tr>
                                                 <tr>
                                                   <th></th>
-                                                  <th>出生年月日</th>
+                                                  <th>出生年月日(格式例如：2000-01-01)</th>
                                                   <th></th>
-                                                  <th><input type="text" name="birthdate" ></th>
+                                                  <th><input type="text" name="birthdate" id="bir" ></th>
                                                 </tr>
                                                 <tr>
                                                   <th></th>
-                                                  <th>何时入队</th>
+                                                  <th>何时入队(格式例如：2000-01-01)</th>
                                                   <th></th>
-                                                  <th><input type="text" name="jointime" ></th>
+                                                  <th><input type="text" name="jointime" id="joi"></th>
                                                 </tr>
                                                 <tr>
                                                   <th></th>
                                                   <th>手机号</th>
                                                   <th></th>
-                                                  <th><input type="text" name="tel" ></th>
+                                                  <th><input type="text" name="tel" id="tel" pattern="^1\d{10}$"></th>
                                                 </tr>
                                                 <tr>
                                                   <th></th>
                                                   <th>邮箱</th>
                                                   <th></th>
-                                                  <th><input type="text" name="email" ></th>
+                                                  <th><input type="text" name="email" id="ema"></th>
                                                 </tr>
                                                 </table>
                                                 <br>
                                   <input type="submit" value="注册完成">
                             </form>
-                            <%
-								HttpSession sess = request.getSession();
-								String verify = null;
-								verify=(String)sess.getAttribute("verify");
-								if(verify!=null){
-									out.print(verify);
-								}
-								session.invalidate(); 
-							 %>
-                            </div>
+								<%
+									HttpSession sess = request.getSession();
+									String verify = null;
+									verify = (String) sess.getAttribute("verify");
+									if (verify != null) {
+										out.print(verify);
+									}
+									session.invalidate();
+								%>
+								<script type="text/javascript">
+									/*1.oninput:监听当前指定元素内容的改变，只要内容改变（添加内容，删除内容）就会触发这个事件*/
+									document.getElementById("use").oninput = function() {
+										console.log("oninput:" + this.value);
+									};
+									/*2.oninvalid:当验证不通过时触发  setcustomValidity 设置默认提示信息*/
+									document.getElementById("userPhone").oninvalid = function() {
+										this.setCustomValidity("请输入合法的6位警号");
+									};
+									/*onkeyup:当键盘弹起的时候触发：每一个键的弹起都会出发一次*/
+									document.getElementById("userName").onkeyup = function() {
+										console.log("onkeyup:" + this.value);
+									};
+								</script>
+							</div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>
