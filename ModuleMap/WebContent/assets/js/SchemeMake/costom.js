@@ -15,7 +15,6 @@ function selectOnchange(){
 		$('#origin').attr('title','输入详细地址')
 		$('#destionation').attr('title','输入详细地址')
 	}
-	
 }
 
 $(document).ready(function(){
@@ -24,5 +23,4 @@ $(document).ready(function(){
 		$('#destionation').attr('title','支持小数点六位，先输入经度后输入纬度用英文逗号隔开')
 		$('#origin').attr('placeholder','121.817608,39.084105')
 		$('#destionation').attr('placeholder','121.781387,39.057184')
-		
 })

@@ -31,6 +31,8 @@ public class SchemeMake extends Thread{
 		float lat2 = Float.parseFloat(destination.substring(destination.indexOf(',')+1,destination.length()));
 		point src = new point(lng,lat);
 		point dst = new point(lng2,lat2);
+		SchemeMake.semDB.acquireUninterruptibly();
+		SchemeMake.semDB.release();
 		
 	}
 }

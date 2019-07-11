@@ -8,7 +8,7 @@ import org.model.SchemeMake.PathApi.settings;
 public class point implements Comparable{
 
 	private int ID;
-	public setID(int ID) {
+	public void setID(int ID) {
 		this.ID=ID;
 	}
 	public double x, y;//x经度 y纬度
