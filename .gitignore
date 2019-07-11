@@ -1,1 +1,4 @@
 /.metadata/
+apache-tomcat-8.5.42/conf
+apache-tomcat-8.5.42/bin
+apache-tomcat-8.5.42/lib
