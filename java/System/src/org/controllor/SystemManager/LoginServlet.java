@@ -2,9 +2,11 @@ package org.controllor.SystemManager;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,17 +33,23 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 		boolean flag;
 		String message =null;
+		String power=null;
         if(username!="" && password!="")
         {
             User user = new User(username,password);
         	flag = LoginDao.login(user);
         	System.out.println(flag);
 	        if(flag){
-	        	message = "登录成功!";
-	        	request.getSession().setAttribute("message", message);
-	            request.getRequestDispatcher("Welcome.jsp").forward(request, response);
-	            System.out.println(message);
-	        	
+	        	power=LoginDao.getPower(user);
+	        	Cookie cookie1 = new Cookie("username", username);//创建一个键值对的cookie对象
+	        	cookie1.setMaxAge(60*60*24);//设置cookie的生命周期
+	        	response.addCookie(cookie1);//添加到response中
+	        	System.out.println(cookie1.getValue());
+	        	Cookie cookie2 = new Cookie("power", power);//创建一个键值对的cookie对象
+	        	cookie2.setMaxAge(60*60*24);//设置cookie的生命周期
+	        	response.addCookie(cookie2);//添加到response中
+	        	System.out.println(cookie2.getValue());
+	        	response.sendRedirect("Welcome.jsp");
 	            return;
 	        }else{
 	        	message = "用户名或密码有误!";

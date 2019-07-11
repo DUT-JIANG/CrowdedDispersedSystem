@@ -86,7 +86,7 @@ public class RegisterServlet extends HttpServlet {
 	            System.out.println(message);
 	            return;
         	}
-        	else if(!Pattern.matches("^[a-zA-Z0-9_-]@(qq|126|163|sina|.*edu.*)(\\.com|\\.cn)$",email)){
+        	else if(!Pattern.matches(".*[a-zA-Z0-9_-]@(qq|126|163|sina|.*edu.*)(\\.com|\\.cn).*",email)){
         		message = "邮箱有误";
 	        	request.getSession().setAttribute("message", message);
 	            request.getRequestDispatcher("Register.jsp").forward(request, response);

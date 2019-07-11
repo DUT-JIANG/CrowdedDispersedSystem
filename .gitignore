@@ -1,5 +1,11 @@
 /.metadata/
+<<<<<<< HEAD
+apache-tomcat-8.5.42/conf
+apache-tomcat-8.5.42/bin
+apache-tomcat-8.5.42/lib
+=======
 
 apache-tomcat-8.5.42/bin/*.*
 apache-tomcat-8.5.42/conf/*.*
 apache-tomcat-8.5.42/lib/*.*
+>>>>>>> 1d5d2819e5a2ab50f407f75d950bc03acc4b77a2

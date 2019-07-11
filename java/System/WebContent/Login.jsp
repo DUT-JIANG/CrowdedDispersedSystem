@@ -28,6 +28,7 @@
 		for (Cookie cookie : cookies) {
 			if (cookie.getName().equals("message")) {
 				set = cookie.getValue();
+				cookie.setMaxAge(0);
 			}
 		}
 	%>
