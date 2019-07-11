@@ -32,7 +32,5 @@ public class SchemeMake extends Thread{
 		point src = new point(lng,lat);
 		point dst = new point(lng2,lat2);
 		
-		
-		
 	}
 }
