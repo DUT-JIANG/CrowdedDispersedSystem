@@ -140,3 +140,8 @@
 0:0:0:0:0:0:0:1 - - [11/Jul/2019:18:58:58 +0800] "GET /System/assets/js/morris/raphael-2.1.0.min.js HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [11/Jul/2019:18:58:58 +0800] "GET /System/assets/js/morris/morris.js HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [11/Jul/2019:18:58:58 +0800] "GET /System/assets/js/custom-scripts.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:19:01:31 +0800] "GET /System/Login.jsp HTTP/1.1" 404 1094
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:19:01:45 +0800] "GET /System/Login.jsp HTTP/1.1" 404 1094
+127.0.0.1 - - [11/Jul/2019:19:05:12 +0800] "GET / HTTP/1.1" 200 11403
+127.0.0.1 - - [11/Jul/2019:19:05:23 +0800] "GET / HTTP/1.1" 200 11403
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:19:05:23 +0800] "GET /System/ HTTP/1.1" 200 4073
