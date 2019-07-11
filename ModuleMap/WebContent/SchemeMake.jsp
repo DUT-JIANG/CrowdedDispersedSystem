@@ -1,17 +1,16 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>人群疏散系统</title>
-    <!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FontAwesome Styles-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- Morris Chart Styles-->
     <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <!-- Custom Styles-->
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <link href='assets/fonts/OpenSans-Regular.ttf' rel='stylesheet' type='text/css' />
+    <link href='assets/css/SchemeMake/custom.css' rel='stylesheet' type='text/css' />
 </head>
 
 <body>
@@ -254,18 +253,11 @@
                         <a href="演练事件审核.html"><i class="fa fa-desktop"></i> 演练事件审核</a>
                     </li>
 					<li>
-                        <a class="active-menu" href="显示疏散路径.html"><i class="fa fa-bar-chart-o"></i> 显示疏散路径</a>
+                        <a href="显示疏散路径.html"><i class="fa fa-bar-chart-o"></i> 显示疏散路径</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-qrcode"></i> 疏散演练<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="人群疏散方案制定.html">人群疏散方案制定</a>
-                            </li>
-                            <li>
-                                <a href="人群疏散方案查看.html">人群疏散方案查看</a>
-                            </li>
-                        </ul>
+                    	<a class="active-menu" href="SchemeMake.jsp"><i class="fa fa-bar-chart-o"></i> 人群疏散方案制定</a>
+                        
                     </li>
                     
                     <li>
@@ -316,44 +308,59 @@
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
-			  <div class="row">
-            <div class="col-md-6">
-                <h1 class="page-header">
+			 <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            人群疏散方案制定<small>Nice tabs and panels</small>
+                        </h1>
+                    </div>
+                </div> 
+                
 
-                    显示疏散路径<small>Show up you the map</small>
-
-                </h1>
-            </div>
-        </div> 
+	    <form action="SchemeMakeServlet" method="POST">
+	       	<div class="row">
+	        	<div class="col-md-12">
+						<select id="mode" onchange="selectOnchange()" class="form-control" name ="mode" >
+					        <option>坐标模式</option>
+					        <option>地址模式</option>
+				        </select> 
+				        <small>起点</small><input id="origin"  type="text" class="form-control" name="origin" title="输入详细地址或坐标">
+				        <small>终点</small><input id="destionation"type="text" class="form-control" name = "destionation"  title="输入详细地址或坐标">
+				        <small>　</small>
+	        	</div>
+	        	<div class="col-md-2">
+		        <input class="form-control center-block" type="submit" value="提交" />
+		        <%
+		        	HttpSession sess = request.getSession();
+		        	String msg = null;
+		        	msg=(String)sess.getAttribute("Message");
+		        	if(msg!=null)
+		        		out.print(msg);
+		        %>
+		        <small>　</small>
+		        </div>
+	        </div>
+        </form>
         
-                 <!-- /. ROW  -->
-                 <div class="row">
-                 <div class="col-md-12">
-        <iframe src="index.jsp" width="100%" height="850" frameborder="0" scrolling="no"></iframe>
-                 </div>
-        </div>
-        
-                 <!-- /. ROW  -->
-		<footer><p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
-				</div>
-             <!-- /. PAGE INNER  -->
+				<footer><p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
+					</div>
+			 <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/jquery-3.1.0.js"></script>
       <!-- Bootstrap Js -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- Metis Menu Js -->
     <script src="assets/js/jquery.metisMenu.js"></script>
-     <!-- Morris Chart Js -->
-     <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="assets/js/morris/morris.js"></script>
       <!-- Custom Js -->
     <script src="assets/js/custom-scripts.js"></script>
-    
+    <script src="assets/js/morris/morris.js"></script>
+    <script src="assets/js/SchemeMake/costom.js"></script>
+
    
 </body>
 </html>

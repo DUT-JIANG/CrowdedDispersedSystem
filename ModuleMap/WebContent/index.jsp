@@ -17,12 +17,12 @@
 <script type="text/javascript">
 
 </script>
-<%@page import="org.model.SchemeSubmit.Tools.ApiRequest"%>
+<%@page import="org.model.SchemeMake.Tools.ApiRequest"%>
 <%@page import="org.model.Map"%>
-<%@page import="org.model.SchemeSubmit.Tools.settings"%>
-<%@page import="org.model.SchemeSubmit.Tools.ApiReturn"%>
-<%@page import="org.model.SchemeSubmit.Tools.point"%>
-<%@page import="org.model.SchemeSubmit.Tools.result.Route"%>
+<%@page import="org.model.SchemeMake.Tools.settings"%>
+<%@page import="org.model.SchemeMake.Tools.ApiReturn"%>
+<%@page import="org.model.SchemeMake.Tools.point"%>
+<%@page import="org.model.SchemeMake.Tools.result.Route"%>
 <%@page import="java.util.ArrayList"%>
 
 <script type="text/javascript">
@@ -37,38 +37,14 @@
 		
 		point src=new point(x1,y1);
 		point dst=new point(x2,y2);
-		point tmp1 = new point(x1,y2);
-		point tmp2 = new point(x2,y1);
-		point [] p1 = Map.getJunctions(src, dst);
-		point [] p2 = Map.getJunctions(src, tmp1);
-		point [] p3 = Map.getJunctions(src, tmp2);
-		point [] p4 = Map.getJunctions(tmp1, dst);
-		point [] p5= Map.getJunctions(tmp2, dst);
-		point [] p6= Map.getJunctions(tmp1, tmp2);
-		
-		ArrayList<point[]> arr = new ArrayList<point[]>();
-		for(int i=1;i<p1.length;i++) {
-			point [] Points = Map.getJunctions(p1[i], tmp1);
-			point [] Points2 = Map.getJunctions(p1[i], tmp2);
-			arr.add(Points);
-			arr.add(Points2);
-		}
-		System.out.println("[Finnishing]");
-		while(arr.size()!=1) {
-			point[] t1 = arr.get(0);
-			point[] t2 = arr.get(1);
-			point [] k= settings.Link(t1, t2);
-			arr.remove(0);
-			arr.remove(0);
-			arr.add(k);
-		}
-		point [] ans = arr.get(0);
-		System.out.println(ans.length);
-		for(int i=1;i<ans.length;i++) {
+		point [] ans = Map.getAllJunction(src,dst);
+		for (point p : ans){
 			out.print("new BMap.Point(");
-			out.print(ans[i].toString2());
+			out.print(p.toString2());
 			out.println("),");
-		}%>
+		}
+		
+		%>
 	];
 	var map = new BMap.Map("allmap");    // 创建Map实例
 	map.centerAndZoom(new BMap.Point(121.817608, 39.084105), 11);  // 初始化地图,设置中心点坐标和地图级别

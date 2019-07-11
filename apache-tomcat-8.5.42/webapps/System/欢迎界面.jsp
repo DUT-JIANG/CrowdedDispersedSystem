@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="utf-8" %>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>人群疏散系统</title>
     <!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
@@ -13,7 +14,6 @@
     <!-- Custom Styles-->
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
 </head>
-
 <body>
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
@@ -240,7 +240,7 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li>
-                        <a href="#"><i class="fa fa-dashboard"></i> 演练事件<span class="fa arrow"></span></a>
+                        <a class="active-menu" href="#"><i class="fa fa-dashboard"></i> 演练事件<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="填写演练事件.html">填写演练事件</a>
@@ -254,7 +254,7 @@
                         <a href="演练事件审核.html"><i class="fa fa-desktop"></i> 演练事件审核</a>
                     </li>
 					<li>
-                        <a class="active-menu" href="显示疏散路径.html"><i class="fa fa-bar-chart-o"></i> 显示疏散路径</a>
+                        <a href="显示疏散路径.html"><i class="fa fa-bar-chart-o"></i> 显示疏散路径</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-qrcode"></i> 疏散演练<span class="fa arrow"></span></a>
@@ -314,46 +314,39 @@
             </div>
         </nav>
         <!-- /. NAV SIDE  -->
-        <div id="page-wrapper" >
+        <div id="page-wrapper">
             <div id="page-inner">
-			  <div class="row">
-            <div class="col-md-6">
-                <h1 class="page-header">
-
-                    显示疏散路径<small>Show up you the map</small>
-
-                </h1>
-            </div>
-        </div> 
-        
-                 <!-- /. ROW  -->
-                 <div class="row">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            欢迎登录人群疏散系统！ <small>Summary of your App</small>
+                        </h1>
+                    </div>
+                </div>
+                <!-- /. 1ROW  -->
+               <div class="row">
                  <div class="col-md-12">
-        <iframe src="index.jsp" width="100%" height="850" frameborder="0" scrolling="no"></iframe>
+        <img src="imagine/人群疏散系统html流程图.png"  alt="人群疏散系统html流程图" />
                  </div>
         </div>
-        
-                 <!-- /. ROW  -->
-		<footer><p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
-				</div>
-             <!-- /. PAGE INNER  -->
+				<footer><p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
             </div>
-         <!-- /. PAGE WRAPPER  -->
+            <!-- /. PAGE INNER  -->
         </div>
-     <!-- /. WRAPPER  -->
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="assets/js/jquery-1.10.2.js"></script>
-      <!-- Bootstrap Js -->
+    <!-- Bootstrap Js -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- Metis Menu Js -->
     <script src="assets/js/jquery.metisMenu.js"></script>
-     <!-- Morris Chart Js -->
-     <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
     <script src="assets/js/morris/morris.js"></script>
-      <!-- Custom Js -->
+    <!-- Custom Js -->
     <script src="assets/js/custom-scripts.js"></script>
-    
-   
 </body>
 </html>

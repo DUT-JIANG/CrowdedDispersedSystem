@@ -100,7 +100,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         this.el = $(options.element);
       }
       if ((this.el == null) || this.el.length === 0) {
-    	return;
         throw new Error("Graph container element not found");
       }
       if (this.el.css('position') === 'static') {
@@ -1675,7 +1674,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         this.el = $(options.element);
       }
       if (this.el === null || this.el.length === 0) {
-    	  return;
         throw new Error("Graph placeholder not found.");
       }
       if (options.data === void 0 || options.data.length === 0) {
