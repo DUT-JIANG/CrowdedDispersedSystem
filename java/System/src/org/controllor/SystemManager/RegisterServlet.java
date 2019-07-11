@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.model.Query;
 import org.model.SystemManage.*;
 
 //控制器层，接收view请求，并转发给model
@@ -104,6 +103,8 @@ public class RegisterServlet extends HttpServlet {
 		       				{
 		       					RegisterDao.register(user);
 		       					message="注册成功!";
+		       					PowerDao.power(user);
+		       					RoleDao.Role(user);
 		       					request.getSession().setAttribute("message", message);
 		        	            request.getRequestDispatcher("Login.jsp").forward(request, response);
 		        			}

@@ -320,11 +320,59 @@
 			 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            角色管理<small>Create new page.</small>
+                            角色管理<small>可以</small>
                         </h1>
                     </div>
                 </div> 
                  <!-- /. ROW  -->
+                 
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            角色信息:
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
+                                            <% 
+                                            	
+                                            %>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <form action="LoginServlet" method="post">
+										角色名称:<br>
+	                                    <input type="text" name="username" placeholder="Username">
+	                                    <br>
+	                             	       密码:<br>
+	                                    <input type="password" name="password" placeholder="Password">
+	                                    <br><br>
+	                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='Register.jsp'">
+	                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='Forget.jsp'">
+	                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='Modify.jsp'">
+	                                    <input type="submit" value="登录" >
+	                                </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- /. ROW  -->
 				 <footer><p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
 				</div>
              <!-- /. PAGE INNER  -->
