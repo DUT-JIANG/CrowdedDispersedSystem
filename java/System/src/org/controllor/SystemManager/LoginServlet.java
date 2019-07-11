@@ -33,18 +33,19 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 		boolean flag;
 		String message =null;
+		String power=null;
         if(username!="" && password!="")
         {
             User user = new User(username,password);
         	flag = LoginDao.login(user);
         	System.out.println(flag);
 	        if(flag){
-	        	message=LoginDao.getPower(user);
+	        	power=LoginDao.getPower(user);
 	        	Cookie cookie1 = new Cookie("username", username);//创建一个键值对的cookie对象
 	        	cookie1.setMaxAge(60*60*24);//设置cookie的生命周期
 	        	response.addCookie(cookie1);//添加到response中
 	        	System.out.println(cookie1.getValue());
-	        	Cookie cookie2 = new Cookie("message", message);//创建一个键值对的cookie对象
+	        	Cookie cookie2 = new Cookie("power", power);//创建一个键值对的cookie对象
 	        	cookie2.setMaxAge(60*60*24);//设置cookie的生命周期
 	        	response.addCookie(cookie2);//添加到response中
 	        	System.out.println(cookie2.getValue());
