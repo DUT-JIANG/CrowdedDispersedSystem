@@ -9,8 +9,8 @@ public class RoleDao {
 	{
 		ArrayList<String[]> ret = new ArrayList<String[]>();
 		ret = Query.runSql(2,"select user_id,role_id from system.userrole where user_id=\'"+user.getUsername()+"\' ");
-		String sql = "insert into system.role(role_id) "
-				+ "values(\'"+user.getUsername()+"\','17')";
+		String sql = "insert into system.role(role_id,role_status) "
+				+ "values(\'"+ret.get(0)[2]+"\','1')";
 		System.out.println(sql);
 		Query.addSql(sql);
 	}

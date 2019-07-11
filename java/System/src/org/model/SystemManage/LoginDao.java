@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import org.model.Query;
 import org.model.SystemManage.User;
 
-
 public class LoginDao {
 	public static boolean login(User user)
 	{	
@@ -22,5 +21,10 @@ public class LoginDao {
 		}
 		else
 			return false;
+	}
+	public static String getPower(User user){
+		ArrayList<String[]> ret = new ArrayList<String[]>();
+		ret = Query.runSql(2,"select user_id,power from system.user_role where user_id=\'"+user.getUsername()+"\' ");
+		return ret.get(0)[2];
 	}
 }

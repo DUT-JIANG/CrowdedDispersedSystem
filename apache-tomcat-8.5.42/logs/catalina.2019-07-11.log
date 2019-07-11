@@ -1,0 +1,47 @@
+11-Jul-2019 17:19:11.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.42
+11-Jul-2019 17:19:11.662 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 4 2019 20:29:04 UTC
+11-Jul-2019 17:19:11.664 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.42.0
+11-Jul-2019 17:19:11.665 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 7
+11-Jul-2019 17:19:11.666 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.1
+11-Jul-2019 17:19:11.667 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-Jul-2019 17:19:11.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\JAVA\jdk-11.0.3
+11-Jul-2019 17:19:11.669 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.3+12-LTS
+11-Jul-2019 17:19:11.670 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+11-Jul-2019 17:19:11.671 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42
+11-Jul-2019 17:19:11.672 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42
+11-Jul-2019 17:19:11.675 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-Jul-2019 17:19:11.678 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-Jul-2019 17:19:11.680 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-Jul-2019 17:19:11.683 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\conf\logging.properties
+11-Jul-2019 17:19:11.686 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-Jul-2019 17:19:11.689 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-Jul-2019 17:19:11.692 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-Jul-2019 17:19:11.695 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+11-Jul-2019 17:19:11.697 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42
+11-Jul-2019 17:19:11.699 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42
+11-Jul-2019 17:19:11.701 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\temp
+11-Jul-2019 17:19:11.703 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\JAVA\jdk-11.0.3\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\JAVA\jdk-11.0.3\bin;D:\Git bush\Git\cmd;D:\Git bush\Git\mingw64\bin;D:\Git bush\Git\mingw64\libexec\git-core;C:\Users\Administrator\.ssh;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\sqlserver1\110\DTS\Binn\;D:\sqlserver1\110\Tools\Binn\;D:\sqlserver1\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;D:\MySQL\mysql-5.7.11-winx64\bin;.]
+11-Jul-2019 17:19:11.744 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-Jul-2019 17:19:11.905 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+11-Jul-2019 17:19:11.918 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+11-Jul-2019 17:19:11.923 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+11-Jul-2019 17:19:11.926 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 753 ms
+11-Jul-2019 17:19:11.979 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-Jul-2019 17:19:11.981 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.42
+11-Jul-2019 17:19:12.468 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-Jul-2019 17:19:12.612 警告 [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [121] milliseconds.
+11-Jul-2019 17:19:12.642 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\docs]
+11-Jul-2019 17:19:12.671 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\docs] has finished in [29] ms
+11-Jul-2019 17:19:12.675 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\examples]
+11-Jul-2019 17:19:12.932 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\examples] has finished in [257] ms
+11-Jul-2019 17:19:12.935 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Helloworld]
+11-Jul-2019 17:19:12.959 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Helloworld] has finished in [25] ms
+11-Jul-2019 17:19:12.961 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\host-manager]
+11-Jul-2019 17:19:12.992 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\host-manager] has finished in [31] ms
+11-Jul-2019 17:19:12.995 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\manager]
+11-Jul-2019 17:19:13.022 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\manager] has finished in [27] ms
+11-Jul-2019 17:19:13.025 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\ROOT]
+11-Jul-2019 17:19:13.046 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\git warehouse\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\ROOT] has finished in [21] ms
+11-Jul-2019 17:19:13.053 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-Jul-2019 17:19:13.066 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+11-Jul-2019 17:19:13.072 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 1143 ms
