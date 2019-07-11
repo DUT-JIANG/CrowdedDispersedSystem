@@ -63,9 +63,9 @@
                             </form>
                             <%
 								HttpSession sess = request.getSession();
-								String message = "";
-								message=(String)sess.getAttribute("message");
-								if(message!=""){
+								String message="";
+								message=(String)sess.getAttribute("verify");
+								if(message!=""&&message!=null){
 										out.print(message);
 								}
 								session.invalidate(); 

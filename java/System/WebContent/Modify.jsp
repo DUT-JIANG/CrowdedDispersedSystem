@@ -49,15 +49,15 @@
                                  <input type="text" name="username" placeholder="Username">
                                  <br>
 								 密码:<br>
-                                 <input type="text" name="password" placeholder="Password">
+                                 <input type="password" name="password" placeholder="Password">
                                  <br><br>
                                  <input type="submit" value="确认">
                             </form>
                             <%
 								HttpSession sess = request.getSession();
 								String message ="";
-								message=(String)sess.getAttribute("message");
-						        if(message == "用户名或密码有误!"){
+								message=(String)sess.getAttribute("modify");
+						        if(message!=null){
 									out.print(message);
 								}
 						        session.invalidate();

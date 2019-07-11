@@ -2,6 +2,7 @@ package org.controllor.SystemManager;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -51,62 +52,97 @@ public class RegisterServlet extends HttpServlet {
         	boolean flagI = RegisterDao.verifyI(temp);
         	boolean flagT = RegisterDao.verifyT(temp);
         	boolean flagE = RegisterDao.verifyE(temp);
-        	if(username!="")
+        	if(!Pattern.matches("\\d{6}", username)){
+        		message = "用户名（警号）有误";
+	        	request.getSession().setAttribute("message", message);
+	            request.getRequestDispatcher("Register.jsp").forward(request, response);
+	            System.out.println(message);
+	            return;
+        	}
+        	else if(!Pattern.matches("^(^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$)|(^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])((\\d{4})|\\d{3}[Xx])$)$",id)){
+        		message = "身份证号有误";
+	        	request.getSession().setAttribute("message", message);
+	            request.getRequestDispatcher("Register.jsp").forward(request, response);
+	            System.out.println(message);
+	            return;
+        	}
+        	else if(!Pattern.matches("^[1-9]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$",birthdate)){
+        		message = "出生日期格式有误";
+	        	request.getSession().setAttribute("message", message);
+	            request.getRequestDispatcher("Register.jsp").forward(request, response);
+	            System.out.println(message);
+	            return;
+        	}
+        	else if(!Pattern.matches("^[1-9]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$",jointime)){
+        		message = "入队时间格式有误";
+	        	request.getSession().setAttribute("message", message);
+	            request.getRequestDispatcher("Register.jsp").forward(request, response);
+	            System.out.println(message);
+	            return;
+        	}
+        	else if(!Pattern.matches("^1[3-9]\\d{9}$",tel)){
+        		message = "手机号有误";
+	        	request.getSession().setAttribute("message", message);
+	            request.getRequestDispatcher("Register.jsp").forward(request, response);
+	            System.out.println(message);
+	            return;
+        	}
+        	else if(!Pattern.matches("^[a-zA-Z0-9_-]@(qq|126|163|sina|.*edu.*)(\\.com|\\.cn)$",email)){
+        		message = "邮箱有误";
+	        	request.getSession().setAttribute("message", message);
+	            request.getRequestDispatcher("Register.jsp").forward(request, response);
+	            System.out.println(message);
+	            return;
+        	}
+        	else{
 	        	if(flagU) {
 	        		if(flagI)
-	        		{
-	        			if(flagT)
-	        			{
-	        				if(flagE)
-	        				{
-	        					RegisterDao.register(user);
-	        					message="注册成功!";
-	        					request.getSession().setAttribute("message", message);
-	        		            request.getRequestDispatcher("Login.jsp").forward(request, response);
-	        				}
-	        				else
-	        				{
-	        					message = "邮箱已被注册";
-	        		        	request.getSession().setAttribute("message", message);
-	        		            request.getRequestDispatcher("Register.jsp").forward(request, response);
-	        		            System.out.println(message);
-	        		            return;
-	        				}
-	        			}
-	        			else
-	    				{
-	    					message = "电话号码已被注册";
-	    		        	request.getSession().setAttribute("message", message);
-	    		            request.getRequestDispatcher("Register.jsp").forward(request, response);
-	    		            System.out.println(message);
-	    		            return;
-	    				}
-	        		}
-	        		else
+		       		{
+		       			if(flagT)
+		       			{
+		       				if(flagE)
+		       				{
+		       					RegisterDao.register(user);
+		       					message="注册成功!";
+		       					request.getSession().setAttribute("message", message);
+		        	            request.getRequestDispatcher("Login.jsp").forward(request, response);
+		        			}
+		        			else
+		       				{
+		       					message = "邮箱已被注册";
+		       		        	request.getSession().setAttribute("message", message);
+		       		            request.getRequestDispatcher("Register.jsp").forward(request, response);
+		       		            System.out.println(message);
+		       		            return;
+		       				}
+		        		}
+		       			else
+		   				{
+		   					message = "电话号码已被注册";
+		    	        	request.getSession().setAttribute("message", message);
+		    	            request.getRequestDispatcher("Register.jsp").forward(request, response);
+		   		            System.out.println(message);
+		   		            return;
+		    			}
+		       		}
+		        	else
 					{
-						message = "身份证号已被注册";
-			        	request.getSession().setAttribute("message", message);
+						message = "身份证号已被注册";				   
+						request.getSession().setAttribute("message", message);
 			            request.getRequestDispatcher("Register.jsp").forward(request, response);
 			            System.out.println(message);
 			            return;
 					}
-	        	}
-	        	else
-				{
+		       	}
+		       	else
+		        {
 					message = "用户名（警号）已被注册";
-		        	request.getSession().setAttribute("message", message);
-		            request.getRequestDispatcher("Register.jsp").forward(request, response);
-		            System.out.println(message);
-		            return;
+			       	request.getSession().setAttribute("message", message);
+			        request.getRequestDispatcher("Register.jsp").forward(request, response);
+			        System.out.println(message);
+			        return;
 				}
-        	else
-        	{
-        		message = "请输入用户名（警号）!";
-        		request.getSession().setAttribute("message", message);
-        		request.getRequestDispatcher("Register.jsp").forward(request, response);
-        		System.out.println(message);
-        		return;
-		}
+        	}
     }
 
     /**
