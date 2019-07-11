@@ -1,35 +1,21 @@
-11-Jul-2019 17:09:29.713 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.42
-11-Jul-2019 17:09:29.738 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 4 2019 20:29:04 UTC
-11-Jul-2019 17:09:29.740 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.42.0
-11-Jul-2019 17:09:29.740 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
-11-Jul-2019 17:09:29.740 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
-11-Jul-2019 17:09:29.741 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
-11-Jul-2019 17:09:29.741 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\Program Files\Java
-11-Jul-2019 17:09:29.741 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.3+12-LTS
-11-Jul-2019 17:09:29.742 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
-11-Jul-2019 17:09:29.742 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:09:29.742 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:09:29.742 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
-11-Jul-2019 17:09:29.743 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
-11-Jul-2019 17:09:29.743 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
-11-Jul-2019 17:09:29.743 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\conf\logging.properties
-11-Jul-2019 17:09:29.744 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
-11-Jul-2019 17:09:29.744 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
-11-Jul-2019 17:09:29.745 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
-11-Jul-2019 17:09:29.745 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
-11-Jul-2019 17:09:29.745 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:09:29.746 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:09:29.746 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\temp
-11-Jul-2019 17:09:29.747 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Program-Files\Anaconda;D:\Program-Files\Anaconda\Library\mingw-w64\bin;D:\Program-Files\Anaconda\Library\usr\bin;D:\Program-Files\Anaconda\Library\bin;D:\Program-Files\Anaconda\Scripts;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;D:\Program Files\MATLAB\R2018b\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft VS Code\bin;D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\Hostx64\x64;C:\Windows\System32;D:\Program-Files\Anaconda\MinGW\bin;D:\Program-Files\Anaconda\MinGW\lib;D:\Program-Files\Anaconda\MinGW\x86_64-w64-mingw32\lib;D:\Program Files (x86)\Android SDK\tools;D:\Program Files (x86)\Android SDK\platform-tools;D:\Android\gradle\bin;C:\Program Files\Git\cmd;D:\Program Files\Java\bin;D:\Program Files\Java\jre\bin;%GRADLE_HOME\bin%;C:\Users\hasee\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\hasee\AppData\Roaming\npm;C:\Users\hasee\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\Scripts;D:\app\hasee\virtual\product\12.2.0\dbhome_1\instantclient;D:\app\hasee\virtual\product\12.2.0\dbhome_1\bin;C:\Users\hasee\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\bin\win64;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\common\lib\x64 ;%CUDA_BIN_PATH%;D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\Hostx64\x64;D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE;D:\Program-Files\opencv\build\x64\vc15\bin;D:\Program Files (x86)\cmake-3.14.2-win64-x64\bin;;.]
-11-Jul-2019 17:09:29.790 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
-11-Jul-2019 17:09:29.805 严重 [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-8080]]
-	org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
-		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
-		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
-		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
-		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:875)
-		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
-		at org.apache.catalina.startup.Catalina.load(Catalina.java:639)
+11-Jul-2019 17:17:00.044 严重 [main] org.apache.tomcat.util.digester.Digester.fatalError Parse Fatal Error at line 63 column 2: 元素内容必须由格式正确的字符数据或标记组成。
+	org.xml.sax.SAXParseException; systemId: file:/F:/Workspace/CrowdedDispersedSystem/CrowdedDispersedSystem/apache-tomcat-8.5.42/conf/server.xml; lineNumber: 63; columnNumber: 2; 元素内容必须由格式正确的字符数据或标记组成。
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2573)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2663)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1216)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:611)
 		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
 		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -37,32 +23,26 @@
 		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:309)
 		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
-	Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
-		at org.apache.catalina.connector.Connector.initInternal(Connector.java:995)
-		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
-		... 12 more
-	Caused by: java.net.BindException: Address already in use: bind
-		at java.base/sun.nio.ch.Net.bind0(Native Method)
-		at java.base/sun.nio.ch.Net.bind(Net.java:461)
-		at java.base/sun.nio.ch.Net.bind(Net.java:453)
-		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
-		at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
-		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
-		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1118)
-		at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:224)
-		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
-		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:68)
-		at org.apache.catalina.connector.Connector.initInternal(Connector.java:993)
-		... 13 more
-11-Jul-2019 17:09:29.809 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
-11-Jul-2019 17:09:29.814 严重 [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[AJP/1.3-8009]]
-	org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
-		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
-		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
-		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
-		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:875)
-		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
-		at org.apache.catalina.startup.Catalina.load(Catalina.java:639)
+11-Jul-2019 17:17:00.056 警告 [main] org.apache.catalina.startup.Catalina.load Catalina.start using conf/server.xml: 元素内容必须由格式正确的字符数据或标记组成。
+11-Jul-2019 17:17:00.057 严重 [main] org.apache.catalina.startup.Catalina.start Cannot start server. Server instance is not configured.
+11-Jul-2019 17:17:07.947 严重 [main] org.apache.tomcat.util.digester.Digester.fatalError Parse Fatal Error at line 63 column 2: 元素内容必须由格式正确的字符数据或标记组成。
+	org.xml.sax.SAXParseException; systemId: file:/F:/Workspace/CrowdedDispersedSystem/CrowdedDispersedSystem/apache-tomcat-8.5.42/conf/server.xml; lineNumber: 63; columnNumber: 2; 元素内容必须由格式正确的字符数据或标记组成。
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2573)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2663)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1216)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:611)
 		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
 		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -70,166 +50,5 @@
 		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:309)
 		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
-	Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
-		at org.apache.catalina.connector.Connector.initInternal(Connector.java:995)
-		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
-		... 12 more
-	Caused by: java.net.BindException: Address already in use: bind
-		at java.base/sun.nio.ch.Net.bind0(Native Method)
-		at java.base/sun.nio.ch.Net.bind(Net.java:461)
-		at java.base/sun.nio.ch.Net.bind(Net.java:453)
-		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
-		at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
-		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
-		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1118)
-		at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:224)
-		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
-		at org.apache.catalina.connector.Connector.initInternal(Connector.java:993)
-		... 13 more
-11-Jul-2019 17:09:29.816 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 521 ms
-11-Jul-2019 17:09:29.865 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
-11-Jul-2019 17:09:29.866 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.42
-11-Jul-2019 17:09:30.289 警告 [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [154] milliseconds.
-11-Jul-2019 17:09:30.312 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\docs]
-11-Jul-2019 17:09:30.338 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\docs] has finished in [26] ms
-11-Jul-2019 17:09:30.338 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\examples]
-11-Jul-2019 17:09:30.678 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\examples] has finished in [340] ms
-11-Jul-2019 17:09:30.678 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Helloworld]
-11-Jul-2019 17:09:30.706 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Helloworld] has finished in [28] ms
-11-Jul-2019 17:09:30.706 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\host-manager]
-11-Jul-2019 17:09:30.739 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\host-manager] has finished in [33] ms
-11-Jul-2019 17:09:30.740 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\manager]
-11-Jul-2019 17:09:30.770 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\manager] has finished in [30] ms
-11-Jul-2019 17:09:30.770 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\ROOT]
-11-Jul-2019 17:09:30.793 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\ROOT] has finished in [23] ms
-11-Jul-2019 17:09:30.793 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\System]
-11-Jul-2019 17:09:31.041 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-11-Jul-2019 17:09:31.044 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\System] has finished in [251] ms
-11-Jul-2019 17:09:31.045 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Tomproject]
-11-Jul-2019 17:09:31.066 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Tomproject] has finished in [21] ms
-11-Jul-2019 17:09:31.072 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 1255 ms
-11-Jul-2019 17:09:31.079 严重 [main] org.apache.catalina.core.StandardServer.await StandardServer.await: create[localhost:8005]: 
-	java.net.BindException: Address already in use: NET_Bind
-		at java.base/java.net.PlainSocketImpl.bind0(Native Method)
-		at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
-		at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:436)
-		at java.base/java.net.ServerSocket.bind(ServerSocket.java:381)
-		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:243)
-		at org.apache.catalina.core.StandardServer.await(StandardServer.java:440)
-		at org.apache.catalina.startup.Catalina.await(Catalina.java:776)
-		at org.apache.catalina.startup.Catalina.start(Catalina.java:722)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:353)
-		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:493)
-11-Jul-2019 17:09:31.080 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
-11-Jul-2019 17:09:31.081 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
-11-Jul-2019 17:09:31.083 信息 [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
-11-Jul-2019 17:09:31.118 信息 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
-11-Jul-2019 17:09:31.118 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
-11-Jul-2019 17:09:31.120 信息 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
-11-Jul-2019 17:09:31.122 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
-11-Jul-2019 17:09:42.523 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.42
-11-Jul-2019 17:09:42.528 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 4 2019 20:29:04 UTC
-11-Jul-2019 17:09:42.529 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.42.0
-11-Jul-2019 17:09:42.529 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
-11-Jul-2019 17:09:42.529 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
-11-Jul-2019 17:09:42.530 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
-11-Jul-2019 17:09:42.530 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\Program Files\Java
-11-Jul-2019 17:09:42.532 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.3+12-LTS
-11-Jul-2019 17:09:42.532 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
-11-Jul-2019 17:09:42.533 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:09:42.533 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:09:42.533 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
-11-Jul-2019 17:09:42.534 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
-11-Jul-2019 17:09:42.534 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
-11-Jul-2019 17:09:42.534 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\conf\logging.properties
-11-Jul-2019 17:09:42.535 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
-11-Jul-2019 17:09:42.535 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
-11-Jul-2019 17:09:42.536 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
-11-Jul-2019 17:09:42.536 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
-11-Jul-2019 17:09:42.541 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:09:42.542 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:09:42.543 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\temp
-11-Jul-2019 17:09:42.543 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Program-Files\Anaconda;D:\Program-Files\Anaconda\Library\mingw-w64\bin;D:\Program-Files\Anaconda\Library\usr\bin;D:\Program-Files\Anaconda\Library\bin;D:\Program-Files\Anaconda\Scripts;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;D:\Program Files\MATLAB\R2018b\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft VS Code\bin;D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\Hostx64\x64;C:\Windows\System32;D:\Program-Files\Anaconda\MinGW\bin;D:\Program-Files\Anaconda\MinGW\lib;D:\Program-Files\Anaconda\MinGW\x86_64-w64-mingw32\lib;D:\Program Files (x86)\Android SDK\tools;D:\Program Files (x86)\Android SDK\platform-tools;D:\Android\gradle\bin;C:\Program Files\Git\cmd;D:\Program Files\Java\bin;D:\Program Files\Java\jre\bin;%GRADLE_HOME\bin%;C:\Users\hasee\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\hasee\AppData\Roaming\npm;C:\Users\hasee\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\Scripts;D:\app\hasee\virtual\product\12.2.0\dbhome_1\instantclient;D:\app\hasee\virtual\product\12.2.0\dbhome_1\bin;C:\Users\hasee\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\bin\win64;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\common\lib\x64 ;%CUDA_BIN_PATH%;D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\Hostx64\x64;D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE;D:\Program-Files\opencv\build\x64\vc15\bin;D:\Program Files (x86)\cmake-3.14.2-win64-x64\bin;;.]
-11-Jul-2019 17:09:42.590 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
-11-Jul-2019 17:09:42.782 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-11-Jul-2019 17:09:42.794 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
-11-Jul-2019 17:09:42.797 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-11-Jul-2019 17:09:42.797 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 744 ms
-11-Jul-2019 17:09:42.839 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
-11-Jul-2019 17:09:42.840 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.42
-11-Jul-2019 17:09:43.290 警告 [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [142] milliseconds.
-11-Jul-2019 17:09:43.322 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\docs]
-11-Jul-2019 17:09:43.349 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\docs] has finished in [26] ms
-11-Jul-2019 17:09:43.350 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\examples]
-11-Jul-2019 17:09:43.702 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\examples] has finished in [353] ms
-11-Jul-2019 17:09:43.703 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Helloworld]
-11-Jul-2019 17:09:43.729 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Helloworld] has finished in [27] ms
-11-Jul-2019 17:09:43.730 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\host-manager]
-11-Jul-2019 17:09:43.761 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\host-manager] has finished in [31] ms
-11-Jul-2019 17:09:43.761 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\manager]
-11-Jul-2019 17:09:43.794 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\manager] has finished in [33] ms
-11-Jul-2019 17:09:43.794 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\ROOT]
-11-Jul-2019 17:09:43.816 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\ROOT] has finished in [21] ms
-11-Jul-2019 17:09:43.816 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\System]
-11-Jul-2019 17:09:44.093 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-11-Jul-2019 17:09:44.096 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\System] has finished in [280] ms
-11-Jul-2019 17:09:44.097 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Tomproject]
-11-Jul-2019 17:09:44.118 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Tomproject] has finished in [22] ms
-11-Jul-2019 17:09:44.125 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
-11-Jul-2019 17:09:44.138 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
-11-Jul-2019 17:09:44.142 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 1344 ms
-11-Jul-2019 17:10:25.519 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.42
-11-Jul-2019 17:10:25.525 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 4 2019 20:29:04 UTC
-11-Jul-2019 17:10:25.526 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.42.0
-11-Jul-2019 17:10:25.526 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
-11-Jul-2019 17:10:25.526 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
-11-Jul-2019 17:10:25.527 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
-11-Jul-2019 17:10:25.527 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\Program Files\Java
-11-Jul-2019 17:10:25.527 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.3+12-LTS
-11-Jul-2019 17:10:25.528 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
-11-Jul-2019 17:10:25.528 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:10:25.528 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:10:25.529 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
-11-Jul-2019 17:10:25.529 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
-11-Jul-2019 17:10:25.529 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
-11-Jul-2019 17:10:25.529 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\conf\logging.properties
-11-Jul-2019 17:10:25.530 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
-11-Jul-2019 17:10:25.531 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
-11-Jul-2019 17:10:25.531 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
-11-Jul-2019 17:10:25.532 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
-11-Jul-2019 17:10:25.532 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:10:25.533 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42
-11-Jul-2019 17:10:25.533 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\temp
-11-Jul-2019 17:10:25.533 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Program-Files\Anaconda;D:\Program-Files\Anaconda\Library\mingw-w64\bin;D:\Program-Files\Anaconda\Library\usr\bin;D:\Program-Files\Anaconda\Library\bin;D:\Program-Files\Anaconda\Scripts;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;D:\Program Files\MATLAB\R2018b\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft VS Code\bin;D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\Hostx64\x64;C:\Windows\System32;D:\Program-Files\Anaconda\MinGW\bin;D:\Program-Files\Anaconda\MinGW\lib;D:\Program-Files\Anaconda\MinGW\x86_64-w64-mingw32\lib;D:\Program Files (x86)\Android SDK\tools;D:\Program Files (x86)\Android SDK\platform-tools;D:\Android\gradle\bin;C:\Program Files\Git\cmd;D:\Program Files\Java\bin;D:\Program Files\Java\jre\bin;%GRADLE_HOME\bin%;C:\Users\hasee\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\hasee\AppData\Roaming\npm;C:\Users\hasee\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\Scripts;D:\app\hasee\virtual\product\12.2.0\dbhome_1\instantclient;D:\app\hasee\virtual\product\12.2.0\dbhome_1\bin;C:\Users\hasee\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\bin\win64;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\common\lib\x64 ;%CUDA_BIN_PATH%;D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\Hostx64\x64;D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE;D:\Program-Files\opencv\build\x64\vc15\bin;D:\Program Files (x86)\cmake-3.14.2-win64-x64\bin;;.]
-11-Jul-2019 17:10:25.577 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
-11-Jul-2019 17:10:25.770 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-11-Jul-2019 17:10:25.785 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
-11-Jul-2019 17:10:25.788 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-11-Jul-2019 17:10:25.789 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 693 ms
-11-Jul-2019 17:10:25.836 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
-11-Jul-2019 17:10:25.836 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.42
-11-Jul-2019 17:10:26.244 警告 [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [142] milliseconds.
-11-Jul-2019 17:10:26.265 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\docs]
-11-Jul-2019 17:10:26.291 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\docs] has finished in [26] ms
-11-Jul-2019 17:10:26.291 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\examples]
-11-Jul-2019 17:10:26.619 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\examples] has finished in [327] ms
-11-Jul-2019 17:10:26.619 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Helloworld]
-11-Jul-2019 17:10:26.646 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Helloworld] has finished in [27] ms
-11-Jul-2019 17:10:26.646 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\host-manager]
-11-Jul-2019 17:10:26.680 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\host-manager] has finished in [34] ms
-11-Jul-2019 17:10:26.681 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\manager]
-11-Jul-2019 17:10:26.711 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\manager] has finished in [30] ms
-11-Jul-2019 17:10:26.711 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\ROOT]
-11-Jul-2019 17:10:26.734 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\ROOT] has finished in [23] ms
-11-Jul-2019 17:10:26.735 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\System]
-11-Jul-2019 17:10:26.999 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-11-Jul-2019 17:10:27.002 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\System] has finished in [267] ms
-11-Jul-2019 17:10:27.003 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Tomproject]
-11-Jul-2019 17:10:27.025 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Workspace\CrowdedDispersedSystem\CrowdedDispersedSystem\apache-tomcat-8.5.42\webapps\Tomproject] has finished in [22] ms
-11-Jul-2019 17:10:27.031 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
-11-Jul-2019 17:10:27.041 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
-11-Jul-2019 17:10:27.044 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 1254 ms
+11-Jul-2019 17:17:07.968 警告 [main] org.apache.catalina.startup.Catalina.load Catalina.start using conf/server.xml: 元素内容必须由格式正确的字符数据或标记组成。
+11-Jul-2019 17:17:07.969 严重 [main] org.apache.catalina.startup.Catalina.start Cannot start server. Server instance is not configured.
