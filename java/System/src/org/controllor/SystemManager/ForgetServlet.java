@@ -41,6 +41,11 @@ public class ForgetServlet extends HttpServlet {
         if(!username.equals("")) {
         	verify=ForgetDao.verify(user);
         }
+        else{
+        	verify="用户名（警号）有误";
+        	request.getSession().setAttribute("verify", verify);
+        	request.getRequestDispatcher("Forget.jsp").forward(request, response);
+        }
         System.out.println(verify);
         if(verify.equals("2")){
         	Cookie cookie = new Cookie("username", username);//创建一个键值对的cookie对象
