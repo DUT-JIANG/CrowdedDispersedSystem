@@ -5,11 +5,11 @@ import java.util.Collection;
 import java.util.TreeSet;
 import java.util.TreeSet;
 
-import org.model.SchemeMake.Tools.ApiRequest;
-import org.model.SchemeMake.Tools.ApiReturn;
+import org.model.SchemeMake.PathApi.PathRequest;
+import org.model.SchemeMake.PathApi.PathReturn;
+import org.model.SchemeMake.PathApi.settings;
+import org.model.SchemeMake.PathApi.result.Route;
 import org.model.SchemeMake.Units.*;
-import org.model.SchemeMake.Tools.settings;
-import org.model.SchemeMake.Tools.result.Route;
 
 public class Map {
 	private static final Collection<? extends point> PointComparator = null;
@@ -26,13 +26,13 @@ public class Map {
 	}
 	
 	public point[] getJunctions() {
-		ApiRequest apr = new ApiRequest(src,dst);
+		PathRequest apr = new PathRequest(src,dst);
 		
 		String JSON = apr.CulculatePath_Drive();
 		if(settings.DEBUG_MODE) {
 			System.out.println(JSON);
 		}
-		ApiReturn ret = new ApiReturn(JSON);
+		PathReturn ret = new PathReturn(JSON);
 		
 		Route[] rot = ret.getRoutes();
 		TreeSet<point>hs = new TreeSet();
@@ -125,13 +125,13 @@ public class Map {
 	
 	
 	public static point[] getJunctions(point src,point dst) {
-		ApiRequest apr = new ApiRequest(src,dst);
+		PathRequest apr = new PathRequest(src,dst);
 		
 		String JSON = apr.CulculatePath_Drive();
 		if(settings.DEBUG_MODE) {
 			System.out.println(JSON);
 		}
-		ApiReturn ret = new ApiReturn(JSON);
+		PathReturn ret = new PathReturn(JSON);
 		
 		Route[] rot = ret.getRoutes();
 		TreeSet<point>hs = new TreeSet();

@@ -2,12 +2,16 @@ package org.model.SchemeMake.Units;
 
 import java.text.DecimalFormat;
 
-import org.model.SchemeMake.Tools.settings;
+import org.model.SchemeMake.PathApi.settings;
 
 
 public class point implements Comparable{
-	
-	public double x, y;
+
+	private int ID;
+	public void setID(int ID) {
+		this.ID=ID;
+	}
+	public double x, y;//x经度 y纬度
 	@Override 
     public boolean equals(Object st) 
     { 
@@ -25,6 +29,8 @@ public class point implements Comparable{
 		this.x = x;
 		this.y = y;
 	}
+	
+
 
 	point() {
 		this.x = 0;

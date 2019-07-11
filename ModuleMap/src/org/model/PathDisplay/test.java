@@ -2,8 +2,8 @@ package org.model.PathDisplay;
 import java.util.ArrayList;
 
 import org.model.Map;
-import org.model.SchemeMake.Tools.*;
-import org.model.SchemeMake.Tools.result.Route;
+import org.model.SchemeMake.PathApi.*;
+import org.model.SchemeMake.PathApi.result.Route;
 import org.model.SchemeMake.Units.point;
 public class test {
 
