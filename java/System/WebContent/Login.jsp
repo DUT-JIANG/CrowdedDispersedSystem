@@ -29,6 +29,11 @@
 			if (cookie.getName().equals("message")) {
 				set = cookie.getValue();
 				cookie.setMaxAge(0);
+			if (cookie.getName().equals("username")) {
+				cookie.setMaxAge(0);
+			}
+			if (cookie.getName().equals("power")) {
+				cookie.setMaxAge(0);
 			}
 		}
 	%>

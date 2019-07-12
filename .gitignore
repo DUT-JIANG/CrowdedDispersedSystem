@@ -2,8 +2,5 @@
 apache-tomcat-8.5.42/bin/*.*
 apache-tomcat-8.5.42/conf/*.*
 apache-tomcat-8.5.42/lib/*.*
-<<<<<<< HEAD
 apache-tomcat-8.5.42/logs/*.*
-=======
-apache-tomcat-8.5.42/logs/*.*
->>>>>>> dc6e19b00d4d9ca7cc8d8cd9e789f0610f7645c3
+.gitignore

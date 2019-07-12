@@ -41,7 +41,7 @@ public class SetPasswordServlet extends HttpServlet {
 	        	SetPasswordDao.setpassword(password,username);
 	        	message="密码设置成功!";
 	        	Cookie cookie = new Cookie("message",message);//创建一个键值对的cookie对象
-	        	cookie.setMaxAge(1);//设置cookie的生命周期
+	        	cookie.setMaxAge(2);//设置cookie的生命周期
 	        	response.addCookie(cookie);//添加到response中
 	        	response.sendRedirect("Login.jsp");
 	        }
