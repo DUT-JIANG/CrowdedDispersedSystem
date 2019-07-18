@@ -32,7 +32,13 @@ public class PersonalModifyServlet extends HttpServlet {
 				request.setCharacterEncoding("utf-8");
 		        response.setContentType("text/html;charset=utf-8");
 		        
-		        String username   = request.getParameter("parm");
+		        String username = null;
+				Cookie[] cookies = request.getCookies();
+				for (Cookie cookie : cookies) {
+					if (cookie.getName().equals("username")) {
+						username = cookie.getValue();
+					}
+				}
 		        String realname   = request.getParameter("realname");
 		        String unit       = request.getParameter("unit");
 		        String position   = request.getParameter("position");

@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ page language = "java" contentType="text/html;charset=UTF-8" pageEncoding="utf-8" %>
 <head>
@@ -17,6 +18,17 @@
     .becenter{text-align:center} 
     </style> 
 </head>
+<%  String quit=null;
+	quit=request.getParameter("quit");
+	if(quit!=null){
+		Cookie[] cookies = request.getCookies();
+		for(Cookie cookie:cookies){
+			cookie.setMaxAge(0);
+			response.addCookie(cookie);
+		}
+		System.out.println("cookie cleard");
+	}
+%>
 
 <body>
     <div id="wrapper">

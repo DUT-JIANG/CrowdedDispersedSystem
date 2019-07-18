@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ page language = "java" contentType="text/html;charset=UTF-8" pageEncoding="utf-8" import="java.util.ArrayList"%>
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>人群疏散系统</title>
@@ -85,27 +86,36 @@
     </style> 
 </head>
 <body>
-	<%!
-		String username;
-		String power;
-		String status;
-		String subtitle=" ";
-	%>
-	<%
-		Cookie[] cookies = request.getCookies();
-		for (Cookie cookie : cookies) {
-			if (cookie.getName().equals("username")) {
-				username = cookie.getValue();
-			}
-			if (cookie.getName().equals("power")) {
-				power = cookie.getValue();
-			}
-			if (cookie.getName().equals("status")) {
-				status = cookie.getValue();
-			}
-		}
-	%>
+
     <div id="wrapper">
+            <%
+	String username = null;
+	Cookie[] cookies = request.getCookies();
+	for (Cookie cookie : cookies) {
+		if (cookie.getName().equals("username")) {
+			username = cookie.getValue();
+		}
+	}
+	if(username==null){
+		out.println("<script>alert('没有权限 ')</script>");
+		return;
+	}
+	%>
+		<%!
+			String power;
+			String status;
+			String subtitle;
+		%>
+		<%
+			for (Cookie cookie : cookies) {
+				if (cookie.getName().equals("power")) {
+					power = cookie.getValue();
+				}
+				if (cookie.getName().equals("status")) {
+					status = cookie.getValue();
+				}
+			}
+		%>
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -124,10 +134,10 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i>用户名:<%=username %></a>
                         </li>
-                        <li><a href="PersonalAreaServlet?parm=<%=username%>"><i class="fa fa-gear fa-fw"></i>个人设置</a>
+                        <li><a href="PersonalAreaServlet"><i class="fa fa-gear fa-fw"></i>个人设置</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="Login.jsp"><i class="fa fa-sign-out fa-fw"></i>退出登录</a>
+                        <li><a href="Login.jsp?quit=1"><i class="fa fa-sign-out fa-fw"></i>退出登录</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -140,72 +150,40 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li>
-                        <a href="#"><i class="fa fa-dashboard"></i> 演练事件<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="填写演练事件.html">填写演练事件</a>
-                            </li>
-                            <li>
-                                <a href="查看演练事件.html">查看演练事件</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="演练事件审核.html"><i class="fa fa-desktop"></i> 演练事件审核</a>
+                        <a href="audit.jsp"><i class="fa fa-desktop"></i> 演练事件审核</a>
                     </li>
 					<li>
-                        <a href="显示疏散路径.html"><i class="fa fa-bar-chart-o"></i> 显示疏散路径</a>
+                        <a href="displayer.jsp?Project_id=1"><i class="fa fa-bar-chart-o"></i> 显示疏散路径</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-qrcode"></i> 疏散演练<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="人群疏散方案制定.html">人群疏散方案制定</a>
-                            </li>
-                            <li>
-                                <a href="人群疏散方案查看.html">人群疏散方案查看</a>
-                            </li>
-                        </ul>
+                        <a href="SchemeMake.jsp"><i class="fa fa-qrcode"></i> 人群疏散方案制定</a>
                     </li>
                     
                     <li>
                         <a href="#"><i class="fa fa-table"></i> 保护演练<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="人群保护方案制定.html">人群保护方案制定</a>
+                                <a href="#">人群保护方案制定</a>
                             </li>
                             <li>
-                                <a href="人群保护方案查看.html">人群保护方案查看</a>
+                                <a href="#">人群保护方案查看</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="演练评估.html"><i class="fa fa-edit"></i> 演练评估 </a>
+                        <a href="Evaluator.jsp"><i class="fa fa-edit"></i> 演练评估 </a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> 演练事件查询<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="按事件名称查询.html">按事件名称查询</a>
-                            </li>
-                            <li>
-                                <a href="按事件状态查询.html">按事件状态查询</a>
-                            </li>
-                            <li>
-                                <a href="按录入人查询.html">按录入人查询</a>
-                            </li>
-                            <li>
-                                <a href="按演练时间查询.html">按演练时间查询</a>
-                            </li>
-                        </ul>
+                        <a href="Querier.jsp"><i class="fa fa-sitemap"></i> 演练事件查询<span class="fa arrow"></span></a>
+                        
                     </li>
                     <li>
-                        <a class="active-menu" href="#"><i class="fa fa-fw fa-file"></i> 系统管理<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-fw fa-file"></i> 系统管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <%
                             	if((Integer.parseInt(power)&4)==4){
                             		subtitle="可修改账户信息";
-                            		out.print("<li><a href='AccountManageServlet'>账户管理</a></li>");
+                            		out.print("<li><a class='active-menu' href='AccountManageServlet'>账户管理</a></li>");
                             	}
                             %>
                             <%
@@ -215,7 +193,7 @@
                             	}
                             %>
                             <li>
-                                <a href="PersonalAreaServlet?parm=<%=username%>">个人主页</a>
+                                <a href="PersonalAreaServlet">个人主页</a>
                             </li>
                         </ul>
                     </li>
@@ -243,7 +221,7 @@
                             <div class="panel-group" id="accordion">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                    <table border="1" class="becenter">
+                                    <table border="1">
                                     <tr>
                                                   <th class="tr_block4">警号</th>
                                                   <th class="tr_block4">姓名</th>

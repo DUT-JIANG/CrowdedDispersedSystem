@@ -56,3 +56,4 @@ goto setArgs
 call "%EXECUTABLE%" stop %CMD_LINE_ARGS%
 
 :end
+exit

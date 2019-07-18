@@ -4,10 +4,9 @@ package org.model;
 import java.sql.*;
 import java.util.ArrayList;
 
-import org.model.SystemManage.User;
 public class Query {
 	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
-    static final String DB_URL = "jdbc:mysql://www.codingjiang.com.cn:3306/system?serverTimezone=UTC";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/system?serverTimezone=UTC";
     // 数据库的用户名与密码，需要根据自己的设置
     static final String USER = "root";
     static final String PASS = "660321";
@@ -17,9 +16,10 @@ public class Query {
     public static ArrayList<String[]> runSql(int sql1,String sql)  {
 		// TODO Auto-generated method stub
 		int columnCount = sql1;
+		ArrayList<String[]> ret = new ArrayList<String[]>();
 		// TODO Auto-generated method stub
 		try{
-			ArrayList<String[]> ret = new ArrayList<String[]>();
+			
 			Connection conn = null;
 			Class.forName(JDBC_DRIVER);
 			conn = DriverManager.getConnection(DB_URL,USER,PASS);
@@ -30,12 +30,11 @@ public class Query {
                 while (rs.next()){
                 	String[] line = new String [columnCount+1];
 	                for(int i=1;i<line.length;i++){
-	                	if(rs.getString(i)==null)
-	                	{
-	                		line[i]=new String("null");
+	                	if(rs.getString(i)==null) {
+	                		line[i]="null";
 	                	}
 	                	else {
-	                		line[i]=new String(rs.getString(i));
+		                    line[i]=new String(rs.getString(i));
 	                	}
 	                 }
 	                ret.add(line);
@@ -52,9 +51,8 @@ public class Query {
 	}
     //读取数据库任意列整表信息
 	public static ArrayList<String[]> runSql(String sql1,String sql)  {
-		// TODO Auto-generated method stub
 		int columnCount = 0;
-		// TODO Auto-generated method stub
+		ArrayList<String[]> ret = new ArrayList<String[]>();
 		try{
 			Connection conn = null;
 			Class.forName(JDBC_DRIVER);
@@ -75,7 +73,6 @@ public class Query {
                 e.printStackTrace();
             }
 		try{
-			ArrayList<String[]> ret = new ArrayList<String[]>();
 			Connection conn = null;
 			Class.forName(JDBC_DRIVER);
 			conn = DriverManager.getConnection(DB_URL,USER,PASS);
@@ -89,7 +86,7 @@ public class Query {
                 while (rs.next()){
                 	String[] line = new String [columnCount];
 	                for(int i=1;i<line.length;i++){
-	                    line[i-1]=new String(rs.getString(i));
+	                    line[i]=new String(rs.getString(i));
 	                 }
 	                ret.add(line);
                 }
@@ -99,7 +96,10 @@ public class Query {
                 return ret;
             }catch(Exception e)
             {
-                e.printStackTrace();
+            	//if(settings.DEBUG_MODE)
+            		e.printStackTrace();
+            	//else
+            		System.out.println("[MySQL] Warning or Wrong");
             }
 		return null;
 	}
@@ -116,9 +116,47 @@ public static void addSql(String sql)  {
         stmt.execute(sql);
         }catch(Exception e)
         {
-            e.printStackTrace();
+        	//if(settings.DEBUG_MODE)
+        		e.printStackTrace();
+        	//else
+        		System.out.println("[MySQL] Warning or Wrong");
         }
 	return;
 }
 
+public static void addSql(ArrayList<String> sql)  {//批量存储：速度好慢啊
+	try{
+		ArrayList<String[]> ret = new ArrayList<String[]>();
+		Connection conn = null;
+		Class.forName(JDBC_DRIVER);
+		conn = DriverManager.getConnection(DB_URL,USER,PASS);
+        //调用Class.forName()方法加载驱动程序 
+        Statement stmt = conn.createStatement(); //创建Statement对象
+        System.out.println("[Saver] success to connect with database");
+        int total = sql.size();
+        System.out.println("[saver] total:"+Integer.toString(total));
+        for(int i=0;i<total;i++) {
+        	if(i%100==0) {
+                System.out.print("[saver] ");
+        		System.out.print(i);
+        		System.out.print('\\');
+        		System.out.println(total);
+        	}
+        	String sql1 = sql.get(i);
+
+        	//System.out.println(sql1);
+        	if(sql1!=null) {
+    			stmt.execute(sql1);
+        	}
+        }
+        System.out.println("[Saver] finished");
+        }catch(Exception e)
+        {
+        	//if(settings.DEBUG_MODE)
+        		e.printStackTrace();
+        	//else
+        		System.out.println("[MySQL] Warning or Wrong");
+        }
+	return;
+}
 }

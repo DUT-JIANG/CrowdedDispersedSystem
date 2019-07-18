@@ -58,7 +58,7 @@ public class RegisterServlet extends HttpServlet {
 	            System.out.println(message);
 	            return;
         	}
-        	else if(!Pattern.matches("^(^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$)|(^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])((\\d{4})|\\d{3}[Xx])$)$",id)){
+        	else if(!Pattern.matches("[1-7][1-3][0]\\d{3}([1][9]\\d{2}|[2][0][0-1][0-9])([0][1-9]|[1][0-2])([0-1][0-9]|[2][0-8]|[3][0-1])\\d{4}",id)){
         		message = "身份证号有误";
 	        	request.getSession().setAttribute("message", message);
 	            request.getRequestDispatcher("Register.jsp").forward(request, response);
