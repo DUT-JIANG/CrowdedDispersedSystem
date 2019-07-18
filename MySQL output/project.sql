@@ -1,0 +1,16 @@
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (1, '测试', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (2, '测试', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (3, '测试', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (4, '测试', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (5, '测试', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (6, '测试', 70);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (7, '测试', 70);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (8, '测试', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (9, '测试', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (10, '测试2', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (11, '测试3', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (12, '测试12345', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (13, '测试6666', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (14, '测试78910', 100);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (15, '测试78910', 20);
+INSERT INTO `project` (`project_id`, `project_name`, `percent`) VALUES (16, '测试34123', 20);

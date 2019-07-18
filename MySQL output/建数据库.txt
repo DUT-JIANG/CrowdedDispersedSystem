@@ -1,0 +1,168 @@
+create table users                                                      /*用户表*/
+(
+	police_id	VARCHAR(6) not null primary key,                                /*警员编号*/
+	u_Password	Varchar(20),					                                  	/*密码*/
+	u_name	Varchar(20),							                                  	/*姓名*/
+	unit	Varchar(50),								                                  	/*单位*/
+	position	Varchar(4),							                                    /*职务*/
+	id	bigint(18),					    				                                  	/*身份证号*/
+	birthdate	date,										                                  	/*出生年月日*/
+	jointime	date,										                                  	/*何时入队*/
+	tel	varchar(11),									                                  	/*手机号*/
+	email	Varchar(50)										                                  /*邮箱*/
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*警员编号，国家规定*/
+
+create table e_event                                                    /*事件表*/
+(
+	event_id int(11) not null Auto_Increment primary key ,                /*事件编号*/
+	e_name varchar(50),                                                   /*事件名称*/
+	eventType varchar(10),                                                /*事件类型*/
+	evacuationPoint varchar(10),                                          /*疏散点*/
+	refugePoint varchar(10),                                              /*避难点*/
+	evacuatedNum int(6),                                                  /*待疏散人数*/
+  e_Status int(2),                                                      /*方案状态*/
+	recorder VARCHAR(6),                                                      /*录入人编号*/
+	DrillTime date,                                                       /*演练时间*/
+	foreign key e_event(recorder) REFERENCES users(police_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*
+	疏散方案名称：疏散点+事件类型
+	疏散方案编号：自增长Auto Increment
+	事件类型：恐怖袭击、火灾、自然灾害
+	int (-8 388 608，8 388 607)
+	Int (-2 147 483 648，2 147 483 647)
+	方案状态：未审核0，已审,1，已启动2
+*/
+
+CREATE TABLE audit                                                      /*事件审核表*/
+(
+	audit_id Int(11) primary key,                                         /*审核表编号*/
+	event_id int(11),                                                     /*事件编号*/
+	suggestion Varchar(30),                                               /*审核意见*/
+	e_Status int(2),                                                      /*方案状态*/
+	foreign key audit(event_id) references e_event(event_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create TABLE route                                                      /*路径表*/
+(
+	Route_id Char(7) primary key,                                         /*路径表编号*/
+	evacuationPoint_id Int(11),                                           /*疏散点编号*/
+	refugePoint_id int(11),                                               /*避难点编号*/
+	pathName varchar(10)                                                  /*路段节点*/
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*
+	路段名称：图强路，南京路
+	路径表编码原则：SSTT100
+*/
+create table augPath                                                    /*增广路径表*/
+(
+	augPath_id Char(7) primary key,                                       /*增广路经编号*/
+	augPath Varchar(10),                                                  /*路径节点*/
+	capacity Int not NULL                                                 /*路径容量*/
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table event_augPath                                              /*事件增广路经表*/
+(
+	allocation_id	Int(8) primary key,                                     /*编号*/      
+	event_id int(11),                                                     /*事件编号*/
+	augPath_id	Char(7),                                                  /*增广路径编号*/
+	foreign key event_id(event_id) references e_event(event_id),
+	foreign key event_augPath(augPath_id) REFERENCES augPath(augPath_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table allocation                                                 /*人群分配方案 */
+(
+	allocation_id	Int(8) primary key,                                     /*分配方案编号*/
+	augPath_id	Char(7),				                                          /*增广路径编号*/	
+	allocation_num	int(5),                                               /*分配人数*/
+	allocation_result	Varchar(800),                                       /*执行结果*/
+	allocation_score int(3),                                              /*评分*/
+	foreign key allocation(augPath_id) REFERENCES augPath(augPath_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table protection                                                 /*保护方案表*/
+(
+	protection_id	Int(11) primary key,                                    /*保护方案编号*/
+	attackerNum	int(4),                                                   /*攻击者人数*/
+	defederNum int(5),					      	                                  /*出警人数*/	
+	Protection_result	Varchar(800),			                                  /*执行结果*/
+	Protection_score int(3)				                                        /*评分*/
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*保护方案的评分参考防守收益给出*/           
+create table strategy                                                   /*防守策略表*/
+(                      
+	strategy_id	int(3) primary key,                                       /*防守策略编号*/
+	augPath_id	Char(7),								                                  /*增广路径编号*/
+	protectProb	Float(5,4),	                                              /*保护概率*/
+	utility	Float(10,9)								                                    /*保护收益*/
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*多少条增广路径，多少条防守策略*/
+create table ExerciseTeam                                               /*演练队伍*/
+(
+	event_id	int(11) primary key,                                        /*事件编号*/
+	commander	int(6),							                                        /*指挥官*/
+	police_id	VARCHAR(6),						                                          /*警员编号*/
+	teamNum	smallint(6),								                                  /*人数*/
+	foreign key ExerciseTeam(event_id) references e_event(event_id),
+	foreign key ExerciseTeam(police_id) references users(police_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table user_role                                                  /*用户角色关联表*/
+(
+  role_id	Int(11) not null Auto_Increment primary key,					        /*编号*/
+	user_id	varchar(6),										                                  /*用户编号*/
+	power int(11),                                                        /*权限序列*/
+	foreign key role(user_id) references users(police_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table role                                                       /*角色表*/
+(
+	role_id	Int(11) primary key,		                                      /*角色编号*/
+	role_name	Varchar(10),							                                  /*角色名称*/
+	role_status	int(1), 						                                      /*角色状态*/
+	foreign key role(role_id) references user_role(role_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table power										                                  /*权限表*/
+(
+	power_id	Int(11) not NULL primary key,				                        /*权限编号*/
+	power_name	Varchar(10)							                                  /*权限名称*/
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table point
+(	
+	p_id int(11) primary KEY,
+	x_coordinate FLOAT(10,6),
+	y_coordinate FLOAT(10,6),
+	event_id	int(11),						                                  /*人数*/
+	foreign key point(event_id) references e_event(event_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table capacity
+(	
+	e_id int(11) primary key,
+	id1 int(11),
+	id2 int(11),
+	capacity int(6),
+	event_id int(11),						                                  /*人数*/
+	foreign key capacity(event_id) references e_event(event_id),
+	FOREIGN key(id1) REFERENCES point(p_id),
+	FOREIGN key(id2) REFERENCES point(p_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table path
+(
+	path_id int(11) primary key auto_Increment,
+	e_id int(11),
+	event_id int(11),
+	foreign key (e_id) references capacity(e_id),
+	foreign key (event_id) references e_event(event_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `project` (
+  `project_id` int(11) NOT NULL,
+  `project_name` varchar(30) DEFAULT NULL,
+  `percent` int(8) DEFAULT NULL,
+  PRIMARY KEY (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
