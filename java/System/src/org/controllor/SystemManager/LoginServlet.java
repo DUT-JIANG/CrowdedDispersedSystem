@@ -25,14 +25,12 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 		request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 		boolean flag;
-		String message =null;
 		String power=null;
         if(username!="" && password!="")
         {
@@ -40,30 +38,34 @@ public class LoginServlet extends HttpServlet {
         	flag = LoginDao.login(user);
         	System.out.println(flag);
 	        if(flag){
-	        	power=LoginDao.getPower(user);
+	        	ArrayList<String[]> ret = LoginDao.getcookie(user);
 	        	Cookie cookie1 = new Cookie("username", username);//创建一个键值对的cookie对象
 	        	cookie1.setMaxAge(60*60*24);//设置cookie的生命周期
 	        	response.addCookie(cookie1);//添加到response中
 	        	System.out.println(cookie1.getValue());
-	        	Cookie cookie2 = new Cookie("power", power);//创建一个键值对的cookie对象
+	        	Cookie cookie2 = new Cookie("power", ret.get(0)[2]);//创建一个键值对的cookie对象
 	        	cookie2.setMaxAge(60*60*24);//设置cookie的生命周期
 	        	response.addCookie(cookie2);//添加到response中
 	        	System.out.println(cookie2.getValue());
+	        	Cookie cookie3 = new Cookie("status", ret.get(0)[3]);//创建一个键值对的cookie对象
+	        	cookie3.setMaxAge(60*60*24);//设置cookie的生命周期
+	        	response.addCookie(cookie3);//添加到response中
+	        	System.out.println(cookie3.getValue());
 	        	response.sendRedirect("Welcome.jsp");
 	            return;
 	        }else{
-	        	message = "用户名或密码有误!";
-	        	request.getSession().setAttribute("message", message);
-	            request.getRequestDispatcher("Login.jsp").forward(request, response);
-	            System.out.println(message);
-	        return;
+	        	PrintWriter out = response.getWriter();
+	        	out.print("<%@ page language = \"java\" contentType=\"text/html;charset=UTF-8\" pageEncoding=\"utf-8\" %><script>alert('用户名或密码有误!'); window.location='Login.jsp'</script>");
+	        	out.flush();
+	        	out.close();
+	        	return;
 	        }
         }
         else {
-        	message = "用户名或密码有误!";
-        	request.getSession().setAttribute("message", message);
-        	request.getRequestDispatcher("Login.jsp").forward(request, response);
-            System.out.println(message);
+        	PrintWriter out = response.getWriter();
+        	out.print("<%@ page language = \"java\" contentType=\"text/html;charset=UTF-8\" pageEncoding=\"utf-8\" %><script>alert('用户名或密码有误!'); window.location='Login.jsp'</script>");
+        	out.flush();
+        	out.close();
             return;
         }
 	}
@@ -74,7 +76,6 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=utf-8");
-		PrintWriter out = response.getWriter();
 		doGet(request, response);
 	}
 

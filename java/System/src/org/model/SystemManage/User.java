@@ -2,6 +2,15 @@ package org.model.SystemManage;
 
 public class User {
 	private String username;
+	public User(String username, String realname, String unit, String position, String tel, String email) {
+		super();
+		this.username = username;
+		this.realname = realname;
+		this.unit = unit;
+		this.position = position;
+		this.tel = tel;
+		this.email = email;
+	}
 	private String password;
 	private String realname;
 	private String unit;
@@ -16,6 +25,14 @@ public class User {
 		this.id = id;
 		this.birthdate = birthdate;
 		this.jointime = jointime;
+		this.tel = tel;
+		this.email = email;
+	}
+	public User(String username, String password, String id, String tel, String email) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.id = id;
 		this.tel = tel;
 		this.email = email;
 	}

@@ -13,16 +13,47 @@
     <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <!-- Custom Styles-->
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <style> 
+    .becenter{text-align:center} 
+    </style>
+    <style> 
+    th{
+    height:40px;
+    text-align:justify;
+    text-align-last:justify;
+    } 
+    .tr_name{
+     width:100px;
+    }
+    .tr_input{
+      width:300px;
+    }
+    .tr_block{
+    width:10px;
+    }
+    .tr_block2{
+    width:10%;
+    }
+    </style> 
 </head>
 <body>
 	<%!
 		String username;
+		String power;
+		String status;
+		String subtitle;
 	%>
 	<%
 		Cookie[] cookies = request.getCookies();
 		for (Cookie cookie : cookies) {
 			if (cookie.getName().equals("username")) {
 				username = cookie.getValue();
+			}
+			if (cookie.getName().equals("power")) {
+				power = cookie.getValue();
+			}
+			if (cookie.getName().equals("status")) {
+				status = cookie.getValue();
 			}
 		}
 	%>
@@ -43,12 +74,12 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>用户名:<%=username %></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="PersonalAreaServlet?parm=<%=username%>"><i class="fa fa-gear fa-fw"></i>个人设置</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="Login.jsp"><i class="fa fa-sign-out fa-fw"></i>退出登录</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -61,7 +92,7 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li>
-                        <a class="active-menu" href="#"><i class="fa fa-dashboard"></i> 演练事件<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-dashboard"></i> 演练事件<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="填写演练事件.html">填写演练事件</a>
@@ -123,11 +154,20 @@
                     <li>
                         <a href="#"><i class="fa fa-fw fa-file"></i> 系统管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
+                            <%
+                            	if((Integer.parseInt(power)&4)==4){
+                            		subtitle="可修改账户信息";
+                            		out.print("<li><a href='AccountManageServlet'>账户管理</a></li>");
+                            	}
+                            %>
+                            <%
+                            	if((Integer.parseInt(power)&2)==2 && status.equals("1")){
+                            		subtitle="可修改角色信息";
+                            		out.print("<li><a href='RoleManageServlet'>角色管理</a></li>");
+                            	}
+                            %>
                             <li>
-                                <a href="账户管理.html">账户管理</a>
-                            </li>
-                            <li>
-                                <a href="角色管理.html">角色管理</a>
+                                <a href="PersonalAreaServlet?parm=<%=username%>">个人主页</a>
                             </li>
                         </ul>
                     </li>

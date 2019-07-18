@@ -32,24 +32,25 @@ public class SetPasswordServlet extends HttpServlet {
         if(password!="") {
 	        if(!password.equals(repassword))
 	        {	
-	        	message="两次密码不一致";
-	        	request.getSession().setAttribute("message", message);
-	            request.getRequestDispatcher("SetPassword.jsp").forward(request, response);
+	        	PrintWriter out = response.getWriter();
+	        	out.print("<%@ page language = \"java\" contentType=\"text/html;charset=UTF-8\" pageEncoding=\"utf-8\" %><script>alert('两次密码不一致!'); window.location='SetPassword.jsp'</script>");
+	        	out.flush();
+	        	out.close();
 	        }
 	        else
 	        {	
 	        	SetPasswordDao.setpassword(password,username);
-	        	message="密码设置成功!";
-	        	Cookie cookie = new Cookie("message",message);//创建一个键值对的cookie对象
-	        	cookie.setMaxAge(2);//设置cookie的生命周期
-	        	response.addCookie(cookie);//添加到response中
-	        	response.sendRedirect("Login.jsp");
+	        	PrintWriter out = response.getWriter();
+	        	out.print("<%@ page language = \"java\" contentType=\"text/html;charset=UTF-8\" pageEncoding=\"utf-8\" %><script>alert('密码设置成功!'); window.location='Login.jsp'</script>");
+	        	out.flush();
+	        	out.close();
 	        }
         }
         else{
-        	message="请输入密码!";
-        	request.getSession().setAttribute("message", message);
-            request.getRequestDispatcher("SetPassword.jsp").forward(request, response);
+        	PrintWriter out = response.getWriter();
+        	out.print("<%@ page language = \"java\" contentType=\"text/html;charset=UTF-8\" pageEncoding=\"utf-8\" %><script>alert('请输入密码!'); window.location='SetPassword.jsp'</script>");
+        	out.flush();
+        	out.close();
         }
 	}
 

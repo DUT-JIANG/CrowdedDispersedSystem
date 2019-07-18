@@ -22,9 +22,10 @@ public class LoginDao {
 		else
 			return false;
 	}
-	public static String getPower(User user){
+	public static ArrayList<String[]> getcookie(User user){
 		ArrayList<String[]> ret = new ArrayList<String[]>();
-		ret = Query.runSql(2,"select user_id,power from system.user_role where user_id=\'"+user.getUsername()+"\' ");
-		return ret.get(0)[2];
+		ret = Query.runSql(3,"select user_id,power,role_status from system.user_role,system.role "
+				+ "where user_id=\'"+user.getUsername()+"\' and system.user_role.role_id = system.role.role_id ");
+		return ret;
 	}
 }

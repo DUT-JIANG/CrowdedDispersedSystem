@@ -119,7 +119,7 @@ public class RegisterServlet extends HttpServlet {
 		        		}
 		       			else
 		   				{
-		   					message = "电话号码已被注册";
+		   					message = "手机号码已被注册";
 		    	        	request.getSession().setAttribute("message", message);
 		    	            request.getRequestDispatcher("Register.jsp").forward(request, response);
 		   		            System.out.println(message);

@@ -67,16 +67,6 @@
                                   <input type="submit" value="确认" >
                             </div>
                             </form>
-                            
-                 			<%
-								HttpSession sess = request.getSession();
-								String message = null;
-								message=(String)sess.getAttribute("message");
-								if(message!=null){
-										out.print(message);
-								}
-								session.invalidate(); 
-							%>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
                         </div>
                     </div>

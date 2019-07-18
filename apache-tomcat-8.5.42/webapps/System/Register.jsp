@@ -33,7 +33,7 @@
     width:10px;
     }
     .tr_block2{
-    width:25%;
+    width:10%;
     }
     </style>   
 </head>
@@ -56,16 +56,16 @@
                 </div>
                 <!-- /. ROW  -->
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
                     </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-heading important">
                                 	注册用户
                             </div>
                             <div class="panel-body  becenter" >
                             <form action="RegisterServlet" method="post">
-                                  <table border="1" class="becenter">
+                                  <table border="0" class="becenter">
                                                 <tr>
                                                   <th class="tr_block2"></th>
                                                   <th class="tr_name">用户名(警号)</th>

@@ -19,24 +19,6 @@
 </head>
 
 <body>
-	<%!
-		String set="";
-	%>
-	<%
-		Cookie[] cookies = request.getCookies();
-	if(cookies!=null)
-		for (Cookie cookie : cookies) {
-			if (cookie.getName().equals("message")) {
-				set = cookie.getValue();
-				cookie.setMaxAge(0);
-			if (cookie.getName().equals("username")) {
-				cookie.setMaxAge(0);
-			}
-			if (cookie.getName().equals("power")) {
-				cookie.setMaxAge(0);
-			}
-		}
-	%>
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar">
@@ -77,19 +59,6 @@
 	                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='Modify.jsp'">
 	                                    <input type="submit" value="登录" >
 	                                </form>
-	                                <%=set%>
-	                                <%
-		                                set=" ";
-	                                %>
-									<%
-										HttpSession sess = request.getSession();
-										String message ="";
-										message=(String)sess.getAttribute("message");
-								        if(message == "用户名或密码有误!"){
-											out.print(message);
-										}
-								        session.invalidate();
-									 %>
                                     </div>
                             </div>
                             <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>

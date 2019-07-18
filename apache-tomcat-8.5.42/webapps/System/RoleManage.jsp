@@ -1,6 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/ TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
+<%@ page language = "java" contentType="text/html;charset=UTF-8" pageEncoding="utf-8" import="java.util.ArrayList"%>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,9 +13,98 @@
     <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <!-- Custom Styles-->
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <style> 
+    .becenter{text-align:center} 
+    </style> 
+    <style> 
+    th{
+    height:40px;
+    text-align:justify;
+    text-align-last:justify;
+    } 
+    .tr_name{
+     width:100px;
+    }
+    .tr_input{
+      width:300px;
+    }
+    .tr_block{
+    width:20px;
+    }
+    .tr_block2{
+    width:40px;
+    }
+    .tr_block3{
+    width:60px;
+    }
+    .tr_block4{
+    width:80px;
+    }
+    .tr_block5{
+    width:100px;
+    }
+    .tr_block6{
+    width:120px;
+    }
+    .tr_block7{
+    width:140px;
+    }
+    .input_1{
+    	width:20px;
+    }
+    .input_2{
+    	width:40px;
+    }
+    .input_3{
+    	width:60px;
+    }
+    .input_4{
+    	width:80px;
+    }
+    .input_5{
+    	width:100px;
+    }
+    .input_6{
+    	width:120px;
+    }
+    .input_7{
+    	width:140px;
+    }
+    .input_8{
+    	width:160px;
+    }
+    .input_9{
+    	width:180px;
+    }
+    </style> 
 </head>
-
 <body>
+	<%!
+		String username;
+		String power;
+		String status;
+		String subtitle=" ";
+		public static String toBinary(int num, int digits) {
+		    String cover = Integer.toBinaryString(1 << digits).substring(1);
+		    String s = Integer.toBinaryString(num);
+		    return s.length() < digits ? cover.substring(s.length()) + s : s;
+		}
+
+	%>
+	<%
+		Cookie[] cookies = request.getCookies();
+		for (Cookie cookie : cookies) {
+			if (cookie.getName().equals("username")) {
+				username = cookie.getValue();
+			}
+			if (cookie.getName().equals("power")) {
+				power = cookie.getValue();
+			}
+			if (cookie.getName().equals("status")) {
+				status = cookie.getValue();
+			}
+		}
+	%>
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -25,210 +114,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">人群疏散系统</a>
+                <a class="navbar-brand" href="#">人群疏散系统</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Doe</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Today</em>
-                                    </span>
-                                </div>
-                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">28% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
-                                            <span class="sr-only">28% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">85% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                                            <span class="sr-only">85% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-tasks -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
-                <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>用户名:<%=username %></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="PersonalAreaServlet?parm=<%=username%>"><i class="fa fa-gear fa-fw"></i>个人设置</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="Login.jsp"><i class="fa fa-sign-out fa-fw"></i>退出登录</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -303,29 +202,36 @@
                     <li>
                         <a href="#"><i class="fa fa-fw fa-file"></i> 系统管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
+                            <%
+                            	if((Integer.parseInt(power)&4)==4){
+                            		subtitle="可修改账户信息";
+                            		out.print("<li><a href='AccountManageServlet'>账户管理</a></li>");
+                            	}
+                            %>
+                            <%
+                            	if((Integer.parseInt(power)&2)==2 && status.equals("1")){
+                            		subtitle="可修改角色信息";
+                            		out.print("<li><a href='RoleManageServlet'>角色管理</a></li>");
+                            	}
+                            %>
                             <li>
-                                <a href="账户管理.html">账户管理</a>
-                            </li>
-                            <li>
-                                <a class="active-menu" href="角色管理.html">角色管理</a>
+                                <a href="PersonalAreaServlet?parm=<%=username%>">个人主页</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </nav>
-        <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
 			 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            角色管理<small>可以</small>
+                            角色管理<small><%=subtitle%></small>
                         </h1>
                     </div>
                 </div> 
                  <!-- /. ROW  -->
-                 
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-default">
@@ -336,37 +242,197 @@
                             <div class="panel-group" id="accordion">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
+                                    <table border="1" class="becenter">
+                                    <tr>
+                                                  <th class="tr_block4">警号</th>
+                                                  <th class="tr_block4">姓名</th>
+                                                  <th class="tr_block6">单位</th>
+                                                  <th class="tr_block4">职务</th>
+                                                  <th class="tr_block6">出生日期</th>
+                                                  <th class="tr_block6">入队日期</th>
+                                                  <th class="tr_block4">角色名称</th>
+                                                  <th class="tr_block4">角色状态</th>
+                                                  <%
+	                                                  if((Integer.parseInt(power)&8)==8){
+	  													out.print("<th class='tr_block4'>");
+	  													out.print("权限码");
+	  													out.print("</th>");
+	  												  }
+                                                  %>
+                                   </tr>
+                                     <%
+	                                    request.setCharacterEncoding("utf-8");
+	                                    response.setContentType("text/html;charset=utf-8");	
+										HttpSession sess = request.getSession();
+	                                    ArrayList<String[]> ret = new ArrayList<String[]>();
+										ret = (ArrayList<String[]>)sess.getAttribute("ret");
+										if (ret.size()!=0) {
+											for(int i=0;i<ret.size();i++)
+											{
+												out.print("<tr>");
+												for(int j=1;j<9;j++){
+													out.print("<th>");
+													out.print(ret.get(i)[j]);
+													out.print("</th>");
+												}
+												if((Integer.parseInt(power)&8)==8){
+													String k = toBinary(Integer.parseInt(ret.get(i)[9]),11);
+													out.print("<th>");
+													out.print(k);
+													out.print("</th>");
+												}
+												out.print("</tr>");
+											}
+										}
+										session.invalidate();
+									%>
+									</table>
+                                	</div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
                                         <h4 class="panel-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
-                                            <% 
-                                            	
-                                            %>
+                                            增加角色
                                             </a>
                                         </h4>
                                     </div>
                                     <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
                                         <div class="panel-body">
-                                            角色，权限，.
+                                            <form action="RoleInsertServlet" method="post">
+				                                  <table border="1">
+				                                  <tr>
+	 	                                              <th class="tr_block4">警号</th>
+				                                      <th class="tr_block4">姓名</th>
+				                                      <th class="tr_block6">单位</th>
+				                                      <th class="tr_block4">职务</th>
+			                                          <th class="tr_block6">出生日期</th>
+				                                      <th class="tr_block6">入队日期</th>
+				                                      <th class="tr_block4">角色名称</th>
+				                                      <th class="tr_block7">角色状态</th>
+				                                   </tr>
+				                                   <tr>
+					                                   <th><input class="input_4" type="text" name="username" id="use"></th>
+					                                   <th><input class="input_4" type="text" name="realname" ></th>
+					                                   <th><input class="input_6"type="text" name="unit" ></th>
+					                                   <th><input class="input_4" type="text" name="position" ></th>
+					                                   <th><input class="input_6"type="text" name="birthdate" id="bir" ></th>
+					                                   <th><input class="input_6" type="text" name="jointime"></th>
+					                                   <th><input class="input_4" type="text" name="role_name"></th>
+					                                   <th>
+					                                   <label><input type="radio" name="status" value="1">启用</label>
+													   <label><input type="radio" name="status" value="0">不启用</label>
+													   </th>
+				                                   </tr>
+				                                   </table>
+				                                   <br>
+				                                  <input type="submit" value="增加完成">
+				                            </form>
                                         </div>
                                     </div>
                                 </div>
-                                
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <form action="LoginServlet" method="post">
-										角色名称:<br>
-	                                    <input type="text" name="username" placeholder="Username">
-	                                    <br>
-	                             	       密码:<br>
-	                                    <input type="password" name="password" placeholder="Password">
-	                                    <br><br>
-	                                    <input type="button" value="注册用户" onclick="javascrtpt:window.location.href='Register.jsp'">
-	                                    <input type="button" value="忘记密码" onclick="javascrtpt:window.location.href='Forget.jsp'">
-	                                    <input type="button" value="修改密码" onclick="javascrtpt:window.location.href='Modify.jsp'">
-	                                    <input type="submit" value="登录" >
-	                                </form>
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
+                                            删除角色
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body">
+                                          请输入需要删除角色的警号:
+                                            <form action="RoleDeleteServlet" method="post">
+                                            	<input class="input_4 becenter" type="text" name="usernameD">
+                                            	<input type="submit" value="确认删除">
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
+                                            修改角色信息
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body">
+                                           <form action="RoleModifyServlet" method="post">
+				                                  <table border="1">
+				                                  <tr>
+	 	                                              <th class="tr_block4">警号</th>
+				                                      <th class="tr_block4">姓名</th>
+				                                      <th class="tr_block6">单位</th>
+				                                      <th class="tr_block4">职务</th>
+			                                          <th class="tr_block6">出生日期</th>
+				                                      <th class="tr_block6">入队日期</th>
+				                                      <th class="tr_block4">角色名称</th>
+				                                   </tr>
+				                                   <tr>
+					                                   <th><input class="input_4" type="text" name="usernameM"></th>
+					                                   <th><input class="input_4" type="text" name="realnameM" ></th>
+					                                   <th><input class="input_6" type="text" name="unitM" ></th>
+					                                   <th><input class="input_4" type="text" name="positionM" ></th>
+					                                   <th><input class="input_6" type="text" name="birthdateM"></th>
+					                                   <th><input class="input_6" type="text" name="jointimeM"></th>
+					                                   <th><input class="input_4" type="text" name="role_nameM"></th>
+				                                   </tr>
+				                                   </table>
+				                                   <br>
+				                                  <input type="submit" value="修改完成">
+				                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">
+                                            启用/停用角色
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body">
+                                            <form action="RoleEnableServlet" method="post">
+				                                  <table border="1">
+				                                  <tr>
+	 	                                              <th class="tr_block4">警号</th>
+				                                      <th class="tr_block7">角色状态</th>
+				                                   </tr>
+				                                   <tr>
+					                                   <th><input class="input_4" type="text" name="usernameC"></th>
+					                                   <th>
+					                                   <label><input type="radio" name="statusC" value="1">启用</label>
+													   <label><input type="radio" name="statusC" value="0">停用</label>
+													   </th>
+				                                   </tr>
+				                                   </table>
+				                                   <br>
+				                                  <input type="submit" value="操作完成">
+				                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <%
+	                                if((Integer.parseInt(power)&8)==8){
+	                            		out.print("<div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'>"
+                                        +"<a data-toggle='collapse' data-parent='#accordion' href='#collapseFive' class='collapsed'>修改角色权限</a></h4></div>"
+                                    	+"<div id='collapseFive' class='panel-collapse collapse' style='height: 0px;'>"
+                                        +"<div class='panel-body'>"
+                                        +"<form action='RolePowerServlet' method='post'>"
+				                        +"<table border='1'>"
+				                        +"<tr><th class='tr_block4'>警号</th><th class='tr_block9'>角色权限（添加权限打√去除不打√）</th></tr>"
+				                        +"<tr><th><input class='input_4' type='text' name='usernameX'></th><th>"
+					                    +"   <label><input type='checkbox' name='power1' value='2'>可修改角色信息</label>"
+										+"	 <label><input type='checkbox' name='power2' value='4'>可修改账户信息</label>"
+										+"	 <label><input type='checkbox' name='power3' value='8'>可修改角色权限</label>"
+										+"	 <label><input type='checkbox' name='power4' value='32'>可修改方案信息</label>"
+										+"</th></tr></table><br><input type='submit' value='操作完成'></form></div></div></div>");
+	                            	}
+                                %>
                             </div>
                         </div>
                     </div>
