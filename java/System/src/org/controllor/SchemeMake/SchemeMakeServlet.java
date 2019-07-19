@@ -114,11 +114,10 @@ public class SchemeMakeServlet extends HttpServlet {
 
 		PrintWriter out;
 		out = response.getWriter();
-		out.print("<script>alert('提交成功'); window.location='SchemeMake.jsp'</script>");//此处未设置跳转
+		out.print("<script>alert('提交成功'); window.location='SchemeMake_display.jsp'</script>");//此处未设置跳转
     	out.flush();
     	out.close();
 		scmk.start();
-		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
