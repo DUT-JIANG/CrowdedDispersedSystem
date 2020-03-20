@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<%@ page language = "java" contentType="text/html;charset=UTF-8" pageEncoding="utf-8" %>
+<%@ page language = "java" contentType="text/html;charset=utf-8"  pageEncoding="utf-8"%>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>人群疏散系统</title>
-    <!-- Bootstrap Styles-->
+    <title>人群疏散系统</title> 
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FontAwesome Styles-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
@@ -73,7 +72,7 @@
 	                                </form>
                                     </div>
                             </div>
-                            <footer><p class="becenter">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p></footer>
+                            <footer><p class="becenter">Copyright &copy; 2019.Crowd Evacuation System.<a target="_blank" href="#">人群疏散系统</a></p></footer>
                         </div>
                     </div>
                 </div>

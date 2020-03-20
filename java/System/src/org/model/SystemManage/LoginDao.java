@@ -24,8 +24,12 @@ public class LoginDao {
 	}
 	public static ArrayList<String[]> getcookie(User user){
 		ArrayList<String[]> ret = new ArrayList<String[]>();
-		ret = Query.runSql(3,"select user_id,power,role_status from system.user_role,system.role "
-				+ "where user_id=\'"+user.getUsername()+"\' and system.user_role.role_id = system.role.role_id ");
+		String k="select user_id,power,role_status from system.user_role,system.role "
+				+ "where user_id=\'"+user.getUsername()+"\' and system.user_role.role_id = system.role.role_id ";
+		System.out.println(k);
+		ret = Query.runSql(3,k);
+		System.out.println(ret.get(0)[2]);
+		System.out.println(ret.get(0)[3]);
 		return ret;
 	}
 }

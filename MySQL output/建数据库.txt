@@ -21,8 +21,8 @@ create table e_event                                                    /*事件表
 	evacuationPoint varchar(10),                                          /*疏散点*/
 	refugePoint varchar(10),                                              /*避难点*/
 	evacuatedNum int(6),                                                  /*待疏散人数*/
-  e_Status int(2),                                                      /*方案状态*/
-	recorder VARCHAR(6),                                                      /*录入人编号*/
+        e_Status int(2),                                                      /*方案状态*/
+	recorder VARCHAR(6),                                                  /*录入人编号*/
 	DrillTime date,                                                       /*演练时间*/
 	foreign key e_event(recorder) REFERENCES users(police_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;

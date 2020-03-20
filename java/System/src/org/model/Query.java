@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Query {
 	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
-    static final String DB_URL = "jdbc:mysql://www.codingjiang.com.cn:3306/system?serverTimezone=UTC";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/system?serverTimezone=UTC";
     // 数据库的用户名与密码，需要根据自己的设置
     static final String USER = "root";
     static final String PASS = "660321";
